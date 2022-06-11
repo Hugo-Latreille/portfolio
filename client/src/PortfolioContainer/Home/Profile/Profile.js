@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Profile.scss";
-import { IoLogoFacebook } from "react-icons/io";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import TypeIt from "typeit-react";
 

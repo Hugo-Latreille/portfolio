@@ -5,7 +5,7 @@
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	height: 10%;
+	height: 55vh;
 	min-height: fit-content;
 	background-color: vars.$background-color;
 }
@@ -61,7 +61,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 1px 0px 0px vars.$white;
+	box-shadow: 0 2px 0px 0px vars.$white;
 	border-radius: 50%;
 	height: 380px;
 	width: 380px;
@@ -70,11 +70,12 @@
 .profile-picture-background {
 	height: 92%;
 	width: 92%;
-	background-image: url("./../../assets/Home/profilephoto.jpg");
+	background-image: url("./../../../assets/Home/profilephoto.jpg");
 	background-size: cover;
 	border-radius: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
+	transition: transform 0.5s ease-in;
 }
 .profile-picture-background:hover {
 	transform: scale(1.07);
@@ -85,18 +86,23 @@
 	margin-bottom: 0.25rem;
 }
 
-.colz .colz-icon a {
+.colz .colz-icon svg {
 	color: rgb(255, 255, 255);
 	padding: 8px;
 	padding-left: 0px;
+	padding-bottom: 0px;
+	transition: transform 0.5s ease-in;
 }
-.colz .colz-icon a:hover {
-	transform: scale(1.5);
+.colz .colz-icon svg:hover {
+	transform: scale(1.2);
 }
 
 @media only screen and (max-width: 1110px) {
 	.profile-picture {
 		margin: 0 0px 0 80px;
+	}
+	.colz-icon {
+		margin-top: 1rem;
 	}
 	.profile-details-name {
 		font-size: 20px;
