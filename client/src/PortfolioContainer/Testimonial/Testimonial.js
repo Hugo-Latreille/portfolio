@@ -49,7 +49,7 @@ const Testimonial = (props) => {
 	};
 
 	return (
-		<div>
+		<div className="testimonial-container">
 			<ScreenHeading
 				title={"Testimonial"}
 				subHeading={"What My Client Say About Me"}
@@ -66,7 +66,7 @@ const Testimonial = (props) => {
 								<p>
 									<FaQuoteLeft className="i" />
 									Ceci est un test
-									<FaQuoteRight className="i" />
+									<FaQuoteRight className="i i-right" />
 								</p>
 								<ul className="stars list-unstyled">
 									<li>

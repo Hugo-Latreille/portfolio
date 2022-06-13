@@ -3,6 +3,7 @@
 import "./Profile.scss";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import TypeIt from "typeit-react";
+import ScrollService from "../../../utilities/ScrollService";
 
 const Profile = () => {
 	return (
@@ -62,7 +63,12 @@ const Profile = () => {
 						</span>
 					</div>
 					<div className="profile-options">
-						<button className="btn primary-btn">Prendre contact</button>
+						<button
+							className="btn primary-btn"
+							onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+						>
+							Prendre contact
+						</button>
 						<a href="/CV2022.pdf" download="CVHugo.pdf">
 							<button className="btn highlighted-btn">
 								Téléchargez mon CV

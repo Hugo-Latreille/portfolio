@@ -1,6 +1,10 @@
+.testimonial-container {
+	padding-bottom: 5rem;
+}
+
 .testimonial-section {
 	padding: 80px 0 80px;
-	background-image: url("../../../src/assets/Testimonial/bg-1.jpg");
+	background-color: #1f2235;
 	background-position: center;
 	background-attachment: fixed;
 	position: relative;
@@ -49,6 +53,10 @@
 }
 .testimonial-section .testi-item p .i {
 	margin-right: 5px;
+	color: tomato;
+}
+.testimonial-section .testi-item p .i-right {
+	margin-left: 8px;
 	color: tomato;
 }
 
