@@ -1,8 +1,10 @@
 import "./App.scss";
 import AboutMe from "./PortfolioContainer/AboutMe/AboutMe";
 import Home from "./PortfolioContainer/Home/Home";
-// import PortfolioContainer from "./PortfolioContainer/PortfolioContainer";
-// import Resume from "./PortfolioContainer/Resume/Resume";
+import Slider from "./PortfolioContainer/Slider/Slider";
+import Resume from "./PortfolioContainer/Resume/Resume";
+import ContactMe from "./PortfolioContainer/ContactMe/ContactMe";
+import Testimonial from "./PortfolioContainer/Testimonial/Testimonial";
 
 function App() {
 	return (
@@ -11,7 +13,10 @@ function App() {
 
 			<Home />
 			<AboutMe />
-			{/* <Resume /> */}
+			<Resume />
+			<Slider />
+			<Testimonial />
+			<ContactMe />
 		</div>
 	);
 }

@@ -2,7 +2,7 @@
 import "./contactMe.scss";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaPaperPlane } from "react-icons/fa";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Typical from "react-typical";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -10,25 +10,10 @@ import "react-toastify/dist/ReactToastify.css";
 import imgBack from "./../../assets/Contact/mail.jpeg";
 import load1 from "./../../assets/Contact/load.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilities/ScrollService";
-import Animations from "../../utilities/Animations";
+
 import Footer from "../../PortfolioContainer/Footer/Footer";
 
 export default function ContactMe(props) {
-	let fadeInScreenHandler = (screen) => {
-		if (screen.fadeInScreen !== props.id) return;
-		Animations.animations.fadeInScreen(props.id);
-	};
-
-	const fadeInSubscription =
-		ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
-	useEffect(() => {
-		return () => {
-			fadeInSubscription.unsubscribe();
-		};
-	}, [fadeInSubscription]);
-
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
@@ -63,7 +48,6 @@ export default function ContactMe(props) {
 				setBanner(res.data.msg);
 				toast.success(res.data.msg);
 				setBool(false);
-
 				setName("");
 				setEmail("");
 				setMessage("");

@@ -10,6 +10,7 @@
 	width: 100%;
 	color: vars.$white;
 	background-color: vars.$background-color;
+	z-index: 2;
 }
 .header-parent {
 	display: flex;

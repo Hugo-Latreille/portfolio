@@ -36,7 +36,7 @@ const Header = () => {
 						}
 						onClick={() => setSelected(1)}
 					>
-						<span>À propos</span>
+						<span>{/* <a href="#aboutMe">À propos</a> */}À propos</span>
 					</div>
 					<div
 						className={

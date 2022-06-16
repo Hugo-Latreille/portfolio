@@ -28,7 +28,7 @@ const AboutMe = () => {
 	};
 
 	return (
-		<div className="about-me-container screen-container fade-in">
+		<div className="about-me-container screen-container fade-in" id="aboutMe">
 			<div className="about-me-parent">
 				<ScreenHeading title={"A propos de moi"} subHeading={"Qui suis-je ?"} />
 				<div className="about-me-card">

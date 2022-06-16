@@ -4,6 +4,8 @@
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - 120px);
+	scroll-snap-align: start;
+	position: relative;
 	// justify-content: space-between;
 	// min-height: 670px;
 }

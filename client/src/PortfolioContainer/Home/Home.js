@@ -5,7 +5,7 @@ import Header from "./Header/Header";
 
 const Home = () => {
 	return (
-		<div className="home-container">
+		<div className="home-container" id="home">
 			<Header />
 			<Profile />
 			<Footer />

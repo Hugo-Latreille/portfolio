@@ -3,8 +3,6 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./testimonial.scss";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilities/ScrollService";
-import Animations from "../../utilities/Animations";
 import lady from "../../assets/Testimonial/lady.png";
 import mike from "../../assets/Testimonial/mike.png";
 import man from "../../assets/Testimonial/man.png";
@@ -12,20 +10,6 @@ import { useEffect } from "react";
 import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
 
 const Testimonial = (props) => {
-	let fadeInScreenHandler = (screen) => {
-		if (screen.fadeInScreen !== props.id) return;
-		Animations.animations.fadeInScreen(props.id);
-	};
-
-	const fadeInSubscription =
-		ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
-	useEffect(() => {
-		return () => {
-			fadeInSubscription.unsubscribe();
-		};
-	}, [fadeInSubscription]);
-
 	const options = {
 		loop: true,
 		margin: 0,
