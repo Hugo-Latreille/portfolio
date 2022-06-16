@@ -41,7 +41,7 @@ const postMail = async (req, res) => {
 				return res
 					.status(400)
 					.json({ msg: "Merci de remplir tous les champs du formulaire" });
-			res.status(200).json({ msg: "Merci d'avoir pris contact" });
+			res.status(200).json({ msg: "Merci d'avoir pris contact !" });
 		} catch (error) {
 			if (error) return res.status(500).json({ msg: "Erreur server" });
 		}

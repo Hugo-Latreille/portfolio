@@ -1,70 +1,20 @@
 import "./header.scss";
-import {
-	TOTAL_SCREENS,
-	GET_SCREEN_INDEX,
-} from "../../../utilities/commonUtils";
-import ScrollService from "../../../utilities/ScrollService";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 
 const Header = () => {
-	const [selectedScreen, setSelectedScreen] = useState(0);
-	const [showHeaderOptions, setShowHeaderOptions] = useState(false);
-
-	const updateCurrentScreen = (currentScreen) => {
-		if (!currentScreen || !currentScreen.screenInView) return;
-
-		let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
-		if (screenIndex < 0) return;
-	};
-	let currentScreenSubscription =
-		ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen);
-
-	const getHeaderOptions = () => {
-		return TOTAL_SCREENS.map((Screen, i) => (
-			<div
-				key={Screen.screen_name}
-				className={getHeaderOptionsClasses(i)}
-				onClick={() => switchScreen(i, Screen)}
-			>
-				<span>{Screen.screen_name}</span>
-			</div>
-		));
-	};
-
-	const getHeaderOptionsClasses = (index) => {
-		let classes = "header-option ";
-		if (index < TOTAL_SCREENS.length - 1) classes += "header-option-separator ";
-
-		if (selectedScreen === index) classes += "selected-header-option ";
-
-		return classes;
-	};
-
-	const switchScreen = (index, screen) => {
-		let screenComponent = document.getElementById(screen.screen_name);
-		if (!screenComponent) return;
-
-		screenComponent.scrollIntoView({ behavior: "smooth" });
-		setSelectedScreen(index);
-		setShowHeaderOptions(false);
-	};
-
-	useEffect(() => {
-		return () => {
-			currentScreenSubscription.unsubscribe();
-		};
-	}, [currentScreenSubscription]);
+	const [selected, setSelected] = useState(0);
+	const [hamburgerOptions, setHamburgerOptions] = useState(false);
 
 	return (
 		<div
 			className="header-container"
-			onClick={() => setShowHeaderOptions(!showHeaderOptions)}
+			onClick={() => setHamburgerOptions(!hamburgerOptions)}
 		>
 			<div className="header-parent">
 				<div
 					className="header-hamburger"
-					onClick={() => setShowHeaderOptions(!showHeaderOptions)}
+					onClick={() => setHamburgerOptions(!hamburgerOptions)}
 				>
 					<FaBars className="header-hamburger-bars" />
 				</div>
@@ -73,12 +23,51 @@ const Header = () => {
 				</div>
 				<div
 					className={
-						showHeaderOptions
+						hamburgerOptions
 							? "header-options show-hamburger-options"
 							: "header-options"
 					}
 				>
-					{getHeaderOptions()}
+					<div
+						className={
+							selected === 1
+								? "header-option header-option-separator selected-header-option"
+								: "header-option header-option-separator"
+						}
+						onClick={() => setSelected(1)}
+					>
+						<span>À propos</span>
+					</div>
+					<div
+						className={
+							selected === 2
+								? "header-option header-option-separator selected-header-option"
+								: "header-option header-option-separator"
+						}
+						onClick={() => setSelected(2)}
+					>
+						<span>Mon Parcours</span>
+					</div>
+					<div
+						className={
+							selected === 3
+								? "header-option header-option-separator selected-header-option"
+								: "header-option header-option-separator"
+						}
+						onClick={() => setSelected(3)}
+					>
+						<span>Projets</span>
+					</div>
+					<div
+						className={
+							selected === 4
+								? "header-option header-option-separator selected-header-option"
+								: "header-option header-option-separator"
+						}
+						onClick={() => setSelected(4)}
+					>
+						<span>Contact</span>
+					</div>
 				</div>
 			</div>
 		</div>

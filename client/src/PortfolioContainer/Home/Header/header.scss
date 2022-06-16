@@ -1,9 +1,13 @@
 @use "src/vars";
 
 .header-container {
+	position: fixed;
+	top: 0;
+	left: 0;
 	display: flex;
 	justify-content: center;
-	height: 149px;
+	height: 120px;
+	width: 100%;
 	color: vars.$white;
 	background-color: vars.$background-color;
 }

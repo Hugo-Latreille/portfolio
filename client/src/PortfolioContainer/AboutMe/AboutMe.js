@@ -1,26 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "./AboutMe.scss";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilities/ScrollService";
-import Animations from "../../utilities/Animations";
-import { useEffect } from "react";
 
-const AboutMe = (props) => {
-	let fadeInScreenHandler = (screen) => {
-		if (screen.fadeInScreen !== props.id) return;
-		Animations.animations.fadeInScreen(props.id);
-	};
-
-	const fadeInSubscription =
-		ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
-	useEffect(() => {
-		return () => {
-			/* UNSUBSCRIBE THE SUBSCRIPTIONS */
-			fadeInSubscription.unsubscribe();
-		};
-	}, [fadeInSubscription]);
-
+const AboutMe = () => {
 	const SCREEN_CONSTANTS = {
 		description:
 			"Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.",
@@ -46,10 +28,7 @@ const AboutMe = (props) => {
 	};
 
 	return (
-		<div
-			className="about-me-container screen-container fade-in"
-			id={props.id || ""}
-		>
+		<div className="about-me-container screen-container fade-in">
 			<div className="about-me-parent">
 				<ScreenHeading title={"A propos de moi"} subHeading={"Qui suis-je ?"} />
 				<div className="about-me-card">
@@ -65,13 +44,7 @@ const AboutMe = (props) => {
 							{renderHighlight()}
 						</div>
 						<div className="about-me-options">
-							<button
-								className="btn primary-btn"
-								onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
-							>
-								{" "}
-								Hire Me{" "}
-							</button>
+							<button className="btn primary-btn"> Hire Me </button>
 							<a href="ehizcv.pdf" download="Ehiedu Ehizcv.pdf">
 								<button className="btn highlighted-btn">Get Resume</button>
 							</a>

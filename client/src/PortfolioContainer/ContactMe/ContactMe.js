@@ -5,7 +5,8 @@ import { FaPaperPlane } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import Typical from "react-typical";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import imgBack from "./../../assets/Contact/mail.jpeg";
 import load1 from "./../../assets/Contact/load.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
@@ -119,6 +120,7 @@ export default function ContactMe(props) {
 					</form>
 				</div>
 			</div>
+			<ToastContainer />
 			<Footer />
 		</div>
 	);
