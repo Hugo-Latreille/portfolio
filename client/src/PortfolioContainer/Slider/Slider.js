@@ -40,8 +40,13 @@ const Slider = () => {
 				style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
 			>
 				{data.map((d) => (
-					<div className="container">
+					<div className="container" key={d.id}>
 						<div className="item">
+							<div className="browser">
+								<div className="browser-circle"></div>
+								<div className="browser-circle"></div>
+								<div className="browser-circle"></div>
+							</div>
 							<div className="left">
 								<div className="leftContainer">
 									<div className="imgContainer">

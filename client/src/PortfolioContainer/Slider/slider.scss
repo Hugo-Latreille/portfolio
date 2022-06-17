@@ -53,12 +53,41 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				position: relative;
 
 				// @include mobile {
 				// 	width: 80%;
 				// 	height: 150px;
 				// 	margin: 15px 0;
 				// }
+
+				.browser {
+					height: 20px;
+					background-color: rgb(243, 242, 242);
+					display: flex;
+					align-items: center;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					z-index: 2;
+					&-circle {
+						width: 6px;
+						height: 6px;
+						border-radius: 50%;
+						margin: 3px;
+						background-color: white;
+						&:nth-child(1) {
+							background-color: red;
+						}
+						&:nth-child(2) {
+							background-color: goldenrod;
+						}
+						&:nth-child(3) {
+							background-color: green;
+						}
+					}
+				}
 
 				.left {
 					flex: 4;
