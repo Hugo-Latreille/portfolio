@@ -1,12 +1,22 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../../context";
 import "./footer.scss";
 
 const Footer = () => {
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
 	return (
 		<div className="footer-container">
 			<div className="footer-parent">
 				{/* <img src={background} alt="background shape" /> */}
 				{/* <img src={wave} alt="background shape" /> */}
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 1440 320"
+					style={{
+						backgroundColor: darkMode ? "#26233a" : "rgba(25, 138, 153, 1)",
+					}}
+				>
 					<path
 						fill="white"
 						fillOpacity="1"

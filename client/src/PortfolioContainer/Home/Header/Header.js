@@ -1,13 +1,21 @@
 import "./header.scss";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaBars } from "react-icons/fa";
+import Toggle from "../../Toggle/Toggle";
+import { ThemeContext } from "../../../context";
 
 const Header = () => {
 	const [selected, setSelected] = useState(0);
 	const [hamburgerOptions, setHamburgerOptions] = useState(false);
 
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
+
 	return (
 		<div
+			style={{
+				backgroundColor: darkMode ? "#26233a" : "rgba(25, 138, 153, 1)",
+			}}
 			className="header-container"
 			onClick={() => setHamburgerOptions(!hamburgerOptions)}
 		>
@@ -69,6 +77,7 @@ const Header = () => {
 						<span>Contact</span>
 					</div>
 				</div>
+				<Toggle />
 			</div>
 		</div>
 	);

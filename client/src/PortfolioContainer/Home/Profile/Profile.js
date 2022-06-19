@@ -3,10 +3,20 @@
 import "./Profile.scss";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import TypeIt from "typeit-react";
+import { useContext } from "react";
+import { ThemeContext } from "../../../context";
 
 const Profile = () => {
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
+
 	return (
-		<div className="profile-container">
+		<div
+			className="profile-container"
+			style={{
+				backgroundColor: darkMode ? "#26233a" : "rgba(25, 138, 153, 1)",
+			}}
+		>
 			<div className="profile-parent">
 				<div className="profile-details">
 					<div className="profile-details-name">
