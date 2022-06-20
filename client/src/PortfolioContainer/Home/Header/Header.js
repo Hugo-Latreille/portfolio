@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 import Toggle from "../../Toggle/Toggle";
 import { ThemeContext } from "../../../context";
 
-const Header = () => {
+const Header = ({ isVisible }) => {
 	const [selected, setSelected] = useState(0);
 	const [hamburgerOptions, setHamburgerOptions] = useState(false);
 
@@ -37,12 +37,17 @@ const Header = () => {
 					}
 				>
 					<div
+						// className={
+						// 	selected === 1
+						// 		? "header-option header-option-separator selected-header-option"
+						// 		: "header-option header-option-separator"
+						// }
+						// onClick={() => setSelected(1)}
 						className={
-							selected === 1
+							isVisible
 								? "header-option header-option-separator selected-header-option"
 								: "header-option header-option-separator"
 						}
-						onClick={() => setSelected(1)}
 					>
 						<span>
 							<a href="#about">À propos</a>

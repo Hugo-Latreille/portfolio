@@ -34,7 +34,7 @@ const Slider = () => {
 	};
 
 	return (
-		<div className="slider-container" id="slider">
+		<div className="slider-container fade-in" id="slider">
 			<div
 				className="slider"
 				style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
