@@ -1,6 +1,7 @@
 .main-container {
-	min-height: 100vh;
-	margin: 100px 0 -450px 0;
+	height: calc(100vh - 120px);
+	scroll-snap-align: start;
+	margin: 200px 0 -450px 0;
 }
 
 .central-form {

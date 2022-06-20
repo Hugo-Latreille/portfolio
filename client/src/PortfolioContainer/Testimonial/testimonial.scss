@@ -1,5 +1,7 @@
 .testimonial-container {
 	padding-bottom: 5rem;
+	height: calc(100vh - 120px);
+	scroll-snap-align: start;
 }
 
 .testimonial-section {

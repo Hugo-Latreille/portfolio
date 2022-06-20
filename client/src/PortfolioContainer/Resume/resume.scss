@@ -2,12 +2,12 @@
 
 .resume-container {
 	display: flex;
+	height: calc(100vh - 120px);
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	min-height: fit-content;
-	margin: 250px 0;
-	padding-bottom: 18rem;
+	// padding-bottom: 18rem;
+	scroll-snap-align: start;
 }
 
 .resume-card {

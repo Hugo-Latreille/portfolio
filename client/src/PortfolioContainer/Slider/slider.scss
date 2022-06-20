@@ -5,6 +5,7 @@
 	justify-content: center;
 	position: relative;
 	height: calc(100vh - 120px);
+	scroll-snap-align: start;
 
 	.arrow {
 		height: 50px;
