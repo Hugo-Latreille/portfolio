@@ -44,7 +44,9 @@ const Header = () => {
 						}
 						onClick={() => setSelected(1)}
 					>
-						<span>{/* <a href="#aboutMe">À propos</a> */}À propos</span>
+						<span>
+							<a href="#about">À propos</a>
+						</span>
 					</div>
 					<div
 						className={
@@ -54,7 +56,9 @@ const Header = () => {
 						}
 						onClick={() => setSelected(2)}
 					>
-						<span>Mon Parcours</span>
+						<span>
+							<a href="#resume">Parcours</a>
+						</span>
 					</div>
 					<div
 						className={
@@ -64,7 +68,9 @@ const Header = () => {
 						}
 						onClick={() => setSelected(3)}
 					>
-						<span>Projets</span>
+						<span>
+							<a href="#slider">Projets</a>
+						</span>
 					</div>
 					<div
 						className={
@@ -74,7 +80,9 @@ const Header = () => {
 						}
 						onClick={() => setSelected(4)}
 					>
-						<span>Contact</span>
+						<span>
+							<a href="#contact">Contact</a>
+						</span>
 					</div>
 				</div>
 				<Toggle />

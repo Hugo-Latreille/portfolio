@@ -21,7 +21,7 @@
 	color: vars.$white;
 }
 .header-logo {
-	font-size: 50px;
+	font-size: 45px;
 	font-family: "Poppins ExtraBold";
 	color: vars.$white;
 }
@@ -39,8 +39,12 @@
 	color: vars.$white;
 }
 .header-option-separator {
-	margin: 0 50px 0 0;
+	margin: 0 30px 0 0;
 	color: vars.$white;
+	& a {
+		text-decoration: none;
+		color: inherit;
+	}
 }
 .selected-header-option {
 	color: vars.$dark-orange;

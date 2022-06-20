@@ -13,7 +13,7 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 
 import Footer from "../../PortfolioContainer/Footer/Footer";
 
-export default function ContactMe(props) {
+export default function ContactMe() {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
@@ -58,7 +58,7 @@ export default function ContactMe(props) {
 	};
 
 	return (
-		<div className="main-container fade-in" id={props.id || ""}>
+		<div className="main-container fade-in" id="contact">
 			<ScreenHeading subHeading={"Prenons contact"} title={"Contactez-moi"} />
 			<div className="central-form">
 				<div className="col">

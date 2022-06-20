@@ -22,6 +22,10 @@
 	border-radius: 10px;
 	border: none;
 	cursor: pointer;
+	& a {
+		text-decoration: none;
+		color: inherit;
+	}
 }
 .btn-scroll svg:hover {
 	transform: rotate(360deg);

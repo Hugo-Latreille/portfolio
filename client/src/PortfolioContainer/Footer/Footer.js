@@ -5,8 +5,9 @@ const Footer = () => {
 	return (
 		<div className="scroll-container">
 			<button className="btn-scroll">
-				{" "}
-				<FaArrowUp />
+				<a href="#app">
+					<FaArrowUp />
+				</a>
 			</button>
 		</div>
 	);

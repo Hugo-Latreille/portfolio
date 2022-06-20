@@ -8,14 +8,14 @@ import Testimonial from "./PortfolioContainer/Testimonial/Testimonial";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App" id="app">
 			{/* <PortfolioContainer /> */}
 
 			<Home />
 			<AboutMe />
 			<Resume />
 			<Slider />
-			<Testimonial />
+			{/* <Testimonial /> */}
 			<ContactMe />
 		</div>
 	);

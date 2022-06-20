@@ -2,11 +2,10 @@
 
 .resume-container {
 	display: flex;
-	height: calc(100vh - 120px);
+	height: calc(110vh - 120px);
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	// padding-bottom: 18rem;
 	scroll-snap-align: start;
 }
 
