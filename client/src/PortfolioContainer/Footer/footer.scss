@@ -1,11 +1,10 @@
 .scroll-container {
 	position: absolute;
 	text-align: center;
-	right: 0;
-	margin-right: 9px;
+	margin: auto;
 	overflow: hidden;
 	flex-direction: column;
-	margin-top: -45px;
+	bottom: 220px;
 	z-index: 100;
 }
 @media only screen and (min-width: 475px) {

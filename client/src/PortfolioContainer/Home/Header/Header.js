@@ -4,7 +4,13 @@ import { FaBars } from "react-icons/fa";
 import Toggle from "../../Toggle/Toggle";
 import { ThemeContext } from "../../../context";
 
-const Header = ({ isVisible, isVisible2, isVisible3, isVisible4 }) => {
+const Header = ({
+	isVisible,
+	isVisible2,
+	isVisible3,
+	isVisible4,
+	isVisible5,
+}) => {
 	// const [selected, setSelected] = useState(0);
 	const [hamburgerOptions, setHamburgerOptions] = useState(false);
 
@@ -26,8 +32,14 @@ const Header = ({ isVisible, isVisible2, isVisible3, isVisible4 }) => {
 				>
 					<FaBars className="header-hamburger-bars" />
 				</div>
-				<div className="header-logo">
-					<span>Hugo~</span>
+				<div
+					className={
+						isVisible5 ? "header-logo selected-logo-option" : "header-logo"
+					}
+				>
+					<span>
+						<a href="#home">Hugo~</a>
+					</span>
 				</div>
 				<div
 					className={

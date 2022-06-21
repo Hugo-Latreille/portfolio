@@ -17,6 +17,8 @@ const Home = ({
 	isVisible2,
 	isVisible3,
 	isVisible4,
+	isVisible5,
+	forwardRef,
 	position,
 	elementDimensions,
 }) => {
@@ -31,12 +33,13 @@ const Home = ({
 	};
 
 	return (
-		<div className="home-container" id="home">
+		<div className="home-container" id="home" ref={forwardRef}>
 			<Header
 				isVisible={isVisible}
 				isVisible2={isVisible2}
 				isVisible3={isVisible3}
 				isVisible4={isVisible4}
+				isVisible5={isVisible5}
 			/>
 			<Profile />
 			<Footer />

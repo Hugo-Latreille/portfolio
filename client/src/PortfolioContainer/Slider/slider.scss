@@ -1,10 +1,10 @@
 .slider-container {
-	background-color: rgb(156, 151, 152);
+	background-color: blue;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	height: calc(110vh - 120px);
+	height: 95.5vh;
 	scroll-snap-align: start;
 
 	.arrow {
@@ -17,12 +17,12 @@
 		// }
 
 		&.left {
-			left: 20px;
+			left: -50px;
 			transform: rotateY(180deg);
 		}
 
 		&.right {
-			right: 25px;
+			right: 0px;
 		}
 	}
 

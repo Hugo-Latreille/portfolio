@@ -29,6 +29,11 @@ function App() {
 		rootMargin: "0px",
 		threshold: 0.6,
 	});
+	const [testRef5, isVisible5] = useObserver({
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.6,
+	});
 
 	// useEffect(() => {
 	// 	console.log(testRef2.current);
@@ -48,13 +53,15 @@ function App() {
 					isVisible2={isVisible2}
 					isVisible3={isVisible3}
 					isVisible4={isVisible4}
+					isVisible5={isVisible5}
+					forwardRef={testRef5}
 				/>
 			</ReactCursorPosition>
 			<AboutMe forwardRef={testRef} isVisible={isRevealed} />
-			{/* <Resume forwardRef={testRef2} isVisible2={isRevealed2} /> */}
-			{/* <Slider forwardRef={testRef3} isVisible3={isRevealed3} /> */}
+			<Resume forwardRef={testRef2} isVisible2={isRevealed2} />
+			<Slider forwardRef={testRef3} isVisible3={isRevealed3} />
 			{/* <Testimonial /> */}
-			{/* <ContactMe forwardRef={testRef4} isVisible4={isRevealed4} /> */}
+			<ContactMe forwardRef={testRef4} isVisible4={isRevealed4} />
 		</div>
 	);
 }
