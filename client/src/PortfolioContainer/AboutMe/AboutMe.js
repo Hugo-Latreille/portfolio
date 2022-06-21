@@ -2,7 +2,7 @@
 import "./AboutMe.scss";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 
-const AboutMe = ({ forwardRef }) => {
+const AboutMe = ({ forwardRef, isVisible }) => {
 	const SCREEN_CONSTANTS = {
 		description:
 			"Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.",
@@ -29,11 +29,17 @@ const AboutMe = ({ forwardRef }) => {
 
 	return (
 		<div
-			className="about-me-container screen-container fade-in"
+			className="about-me-container screen-container"
 			id="about"
 			ref={forwardRef}
 		>
-			<div className="about-me-parent">
+			<div
+				className={
+					isVisible
+						? "about-me-parent fade-in reveal"
+						: "about-me-parent fade-in"
+				}
+			>
 				<ScreenHeading title={"A propos de moi"} subHeading={"Qui suis-je ?"} />
 				<div className="about-me-card">
 					<div className="about-me-profile"></div>

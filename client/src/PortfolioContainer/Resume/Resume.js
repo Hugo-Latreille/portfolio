@@ -2,7 +2,7 @@ import "./resume.scss";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import { useState } from "react";
 
-const Resume = (props) => {
+const Resume = ({ forwardRef, isVisible2 }) => {
 	/* STATES */
 	const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
 	const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
@@ -228,8 +228,18 @@ const Resume = (props) => {
 	};
 
 	return (
-		<div className="resume-container screen-container fade-in" id="resume">
-			<div className="resume-content">
+		<div
+			className="resume-container screen-container "
+			id="resume"
+			ref={forwardRef}
+		>
+			<div
+				className={
+					isVisible2
+						? "resume-content fade-in reveal"
+						: "resume-content fade-in"
+				}
+			>
 				<ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
 				<div className="resume-card">
 					<div className="resume-bullets">

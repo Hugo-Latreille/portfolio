@@ -96,11 +96,12 @@ body ::-webkit-scrollbar-thumb {
 }
 
 .fade-in {
-	opacity: 0.2;
-	// transform: translateY(80px);
-	transition: all 2s ease;
+	opacity: 0;
+	transform: translateY(400px);
+	transition: all 1s ease;
 }
 
 .fade-in.reveal {
 	opacity: 1;
+	transform: translateY(0px);
 }

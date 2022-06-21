@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 import Toggle from "../../Toggle/Toggle";
 import { ThemeContext } from "../../../context";
 
-const Header = ({ isVisible }) => {
+const Header = ({ isVisible, isVisible2, isVisible3, isVisible4 }) => {
 	const [selected, setSelected] = useState(0);
 	const [hamburgerOptions, setHamburgerOptions] = useState(false);
 
@@ -54,36 +54,51 @@ const Header = ({ isVisible }) => {
 						</span>
 					</div>
 					<div
+						// className={
+						// 	selected === 2
+						// 		? "header-option header-option-separator selected-header-option"
+						// 		: "header-option header-option-separator"
+						// }
+						// onClick={() => setSelected(2)}
 						className={
-							selected === 2
+							isVisible2
 								? "header-option header-option-separator selected-header-option"
 								: "header-option header-option-separator"
 						}
-						onClick={() => setSelected(2)}
 					>
 						<span>
 							<a href="#resume">Parcours</a>
 						</span>
 					</div>
 					<div
+						// className={
+						// 	selected === 3
+						// 		? "header-option header-option-separator selected-header-option"
+						// 		: "header-option header-option-separator"
+						// }
+						// onClick={() => setSelected(3)}
 						className={
-							selected === 3
+							isVisible3
 								? "header-option header-option-separator selected-header-option"
 								: "header-option header-option-separator"
 						}
-						onClick={() => setSelected(3)}
 					>
 						<span>
 							<a href="#slider">Projets</a>
 						</span>
 					</div>
 					<div
+						// className={
+						// 	selected === 4
+						// 		? "header-option header-option-separator selected-header-option"
+						// 		: "header-option header-option-separator"
+						// }
+						// onClick={() => setSelected(4)}
 						className={
-							selected === 4
+							isVisible4
 								? "header-option header-option-separator selected-header-option"
 								: "header-option header-option-separator"
 						}
-						onClick={() => setSelected(4)}
 					>
 						<span>
 							<a href="#contact">Contact</a>

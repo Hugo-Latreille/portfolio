@@ -17,13 +17,18 @@
 		// }
 
 		&.left {
-			left: 100px;
+			left: 20px;
 			transform: rotateY(180deg);
 		}
 
 		&.right {
-			right: 100px;
+			right: 25px;
 		}
+	}
+
+	.slider-parent {
+		max-width: 1000px;
+		width: 70%;
 	}
 
 	.slider {
@@ -45,6 +50,7 @@
 			align-items: center;
 			justify-content: center;
 			height: 35vh;
+			transform: translate(-200px, -200px);
 
 			.item {
 				width: 700px;

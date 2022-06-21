@@ -5,25 +5,55 @@ import Slider from "./PortfolioContainer/Slider/Slider";
 import Resume from "./PortfolioContainer/Resume/Resume";
 import ContactMe from "./PortfolioContainer/ContactMe/ContactMe";
 import { useObserver } from "./utilities/scrollObserver";
+import { useEffect } from "react";
 // import Testimonial from "./PortfolioContainer/Testimonial/Testimonial";
 
 function App() {
-	const [testRef, isVisible] = useObserver({
+	const [testRef, isVisible, isRevealed] = useObserver({
 		root: null,
 		rootMargin: "0px",
-		threshold: 1,
+		threshold: 0.6,
 	});
+	const [testRef2, isVisible2, isRevealed2] = useObserver({
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.6,
+	});
+	const [testRef3, isVisible3, isRevealed3] = useObserver({
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.6,
+	});
+	const [testRef4, isVisible4, isRevealed4] = useObserver({
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.6,
+	});
+
+	// useEffect(() => {
+	// 	console.log(testRef2.current);
+	// 	console.log(isVisible2);
+	// }, [testRef2, isVisible2]);
+	useEffect(() => {
+		console.log(isRevealed);
+		console.log(isVisible);
+	}, [testRef, isVisible, isRevealed]);
 
 	return (
 		<div className="App" id="app">
 			{/* <PortfolioContainer /> */}
 
-			<Home isVisible={isVisible} />
-			<AboutMe forwardRef={testRef} />
-			<Resume />
-			<Slider />
+			<Home
+				isVisible={isVisible}
+				isVisible2={isVisible2}
+				isVisible3={isVisible3}
+				isVisible4={isVisible4}
+			/>
+			<AboutMe forwardRef={testRef} isVisible={isRevealed} />
+			<Resume forwardRef={testRef2} isVisible2={isRevealed2} />
+			<Slider forwardRef={testRef3} isVisible3={isRevealed3} />
 			{/* <Testimonial /> */}
-			<ContactMe />
+			<ContactMe forwardRef={testRef4} isVisible4={isRevealed4} />
 		</div>
 	);
 }

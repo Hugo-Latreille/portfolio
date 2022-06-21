@@ -13,7 +13,7 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 
 import Footer from "../../PortfolioContainer/Footer/Footer";
 
-export default function ContactMe() {
+export default function ContactMe({ forwardRef, isVisible4 }) {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
@@ -58,7 +58,15 @@ export default function ContactMe() {
 	};
 
 	return (
-		<div className="main-container fade-in" id="contact">
+		<div
+			className={
+				isVisible4
+					? "main-container screen-container fade-in reveal"
+					: "main-container screen-container fade-in"
+			}
+			id="contact"
+			ref={forwardRef}
+		>
 			<ScreenHeading subHeading={"Prenons contact"} title={"Contactez-moi"} />
 			<div className="central-form">
 				<div className="col">
