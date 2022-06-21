@@ -6,7 +6,7 @@ import TypeIt from "typeit-react";
 import { useContext } from "react";
 import { ThemeContext } from "../../../context";
 
-const Profile = () => {
+const Profile = (props) => {
 	const theme = useContext(ThemeContext);
 	const darkMode = theme.state.darkMode;
 

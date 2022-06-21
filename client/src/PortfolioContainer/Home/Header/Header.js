@@ -5,7 +5,7 @@ import Toggle from "../../Toggle/Toggle";
 import { ThemeContext } from "../../../context";
 
 const Header = ({ isVisible, isVisible2, isVisible3, isVisible4 }) => {
-	const [selected, setSelected] = useState(0);
+	// const [selected, setSelected] = useState(0);
 	const [hamburgerOptions, setHamburgerOptions] = useState(false);
 
 	const theme = useContext(ThemeContext);
