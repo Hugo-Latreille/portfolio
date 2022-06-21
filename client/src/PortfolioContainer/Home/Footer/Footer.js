@@ -25,6 +25,11 @@ const Footer = () => {
 				</svg>
 				{/* <div className="background-image"></div> */}
 			</div>
+			<div className="mouse-icon">
+				<span className="mouse">
+					<span className="wheel"></span>
+				</span>
+			</div>
 		</div>
 	);
 };

@@ -5,7 +5,6 @@ import Slider from "./PortfolioContainer/Slider/Slider";
 import Resume from "./PortfolioContainer/Resume/Resume";
 import ContactMe from "./PortfolioContainer/ContactMe/ContactMe";
 import { useObserver } from "./utilities/scrollObserver";
-import { useEffect } from "react";
 // import Testimonial from "./PortfolioContainer/Testimonial/Testimonial";
 
 function App() {
@@ -34,26 +33,25 @@ function App() {
 	// 	console.log(testRef2.current);
 	// 	console.log(isVisible2);
 	// }, [testRef2, isVisible2]);
-	useEffect(() => {
-		console.log(isRevealed);
-		console.log(isVisible);
-	}, [testRef, isVisible, isRevealed]);
+	// useEffect(() => {
+	// 	console.log(isRevealed);
+	// 	console.log(isVisible);
+	// }, [testRef, isVisible, isRevealed]);
 
 	return (
 		<div className="App" id="app">
 			{/* <PortfolioContainer /> */}
-
 			<Home
 				isVisible={isVisible}
 				isVisible2={isVisible2}
 				isVisible3={isVisible3}
 				isVisible4={isVisible4}
 			/>
-			<AboutMe forwardRef={testRef} isVisible={isRevealed} />
+			{/* <AboutMe forwardRef={testRef} isVisible={isRevealed} />
 			<Resume forwardRef={testRef2} isVisible2={isRevealed2} />
 			<Slider forwardRef={testRef3} isVisible3={isRevealed3} />
 			{/* <Testimonial /> */}
-			<ContactMe forwardRef={testRef4} isVisible4={isRevealed4} />
+			{/* <ContactMe forwardRef={testRef4} isVisible4={isRevealed4} /> */}
 		</div>
 	);
 }
