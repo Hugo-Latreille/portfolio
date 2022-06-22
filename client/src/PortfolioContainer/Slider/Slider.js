@@ -1,5 +1,7 @@
 import "./slider.scss";
 import { useState } from "react";
+import { MdOutlineArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 
 const Slider = ({ forwardRef, isVisible3 }) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,6 +42,10 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 					isVisible3 ? "slider-parent fade-in reveal" : "slider-parent fade-in"
 				}
 			>
+				<ScreenHeading
+					subHeading={"Réalisés en 2022"}
+					title={"Quelques projets"}
+				/>
 				<div
 					className="slider"
 					style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
@@ -69,16 +75,12 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 						</div>
 					))}
 				</div>
-				<img
-					src="/assets/arrow.png"
+				<MdOutlineArrowBackIosNew
 					className="arrow left"
-					alt=""
 					onClick={() => handleClick("left")}
 				/>
-				<img
-					src="/assets/arrow.png"
+				<MdArrowForwardIos
 					className="arrow right"
-					alt=""
 					onClick={() => handleClick()}
 				/>
 			</div>

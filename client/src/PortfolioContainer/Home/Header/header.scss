@@ -47,10 +47,10 @@ a {
 	color: inherit;
 }
 .selected-header-option {
-	color: vars.$dark-orange;
+	color: vars.$title-color;
 }
 .selected-logo-option {
-	color: rgb(245, 211, 22);
+	color: vars.$title-color;
 }
 
 /*IPAD PRO RESPONSIVENESS*/

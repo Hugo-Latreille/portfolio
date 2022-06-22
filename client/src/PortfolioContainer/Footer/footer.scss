@@ -1,10 +1,12 @@
+@use "src/vars";
+
 .scroll-container {
 	position: absolute;
 	text-align: center;
 	margin: auto;
 	overflow: hidden;
 	flex-direction: column;
-	bottom: 220px;
+	bottom: 100px;
 	z-index: 100;
 }
 @media only screen and (min-width: 475px) {
@@ -17,7 +19,7 @@
 	height: 50px;
 	color: aliceblue;
 	font-size: 24px;
-	background-color: tomato;
+	background-color: vars.$title-color;
 	border-radius: 10px;
 	border: none;
 	cursor: pointer;

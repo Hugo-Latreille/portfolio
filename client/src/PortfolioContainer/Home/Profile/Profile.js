@@ -72,7 +72,9 @@ const Profile = (props) => {
 						</span>
 					</div>
 					<div className="profile-options">
-						<button className="btn primary-btn">Prendre contact</button>
+						<button className="btn primary-btn">
+							<a href="#contact">Prendre contact</a>
+						</button>
 						<a href="/CV2022.pdf" download="CVHugo.pdf">
 							<button className="btn highlighted-btn">
 								Téléchargez mon CV

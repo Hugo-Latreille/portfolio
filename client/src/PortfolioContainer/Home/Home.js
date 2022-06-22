@@ -1,5 +1,4 @@
 import "./home.scss";
-import Footer from "./Footer/Footer";
 import Profile from "./Profile/Profile";
 import Header from "./Header/Header";
 import ApiSVG from "../../assets/Home/api.js";
@@ -11,6 +10,7 @@ import HtmlSVJ from "../../assets/Home/html.js";
 import SqlSVJ from "../../assets/Home/sql.js";
 import ResponsiveSVJ from "../../assets/Home/responsive.js";
 import TerminalSVJ from "../../assets/Home/terminal.js";
+import HomeFooter from "./Footer/Footer";
 
 const Home = ({
 	isVisible,
@@ -42,7 +42,7 @@ const Home = ({
 				isVisible5={isVisible5}
 			/>
 			<Profile />
-			<Footer />
+			<HomeFooter home />
 			<div className="parallax" data-relative-input="true">
 				<ApiSVG
 					width="27"

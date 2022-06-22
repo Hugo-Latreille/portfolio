@@ -30,6 +30,10 @@
 	background-color: vars.$background-color;
 }
 
+.rotate {
+	transform: rotate(180deg);
+}
+
 /*IPAD PRO RESPONSIVENESS*/
 // @media only screen and (max-width: 1110px) {
 // 	.footer-parent {

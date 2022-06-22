@@ -8,10 +8,13 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import imgBack from "./../../assets/Contact/mail.jpeg";
+import emailSVG from "./../../assets/Contact/email-mail-svgrepo-com.svg";
 import load1 from "./../../assets/Contact/load.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-
-import Footer from "../../PortfolioContainer/Footer/Footer";
+import HomeFooter from "../Home/Footer/Footer";
+import Footer from "../Footer/Footer";
+import { useContext } from "react";
+import { ThemeContext } from "../../context";
 
 export default function ContactMe({ forwardRef, isVisible4 }) {
 	const [name, setName] = useState("");
@@ -19,6 +22,8 @@ export default function ContactMe({ forwardRef, isVisible4 }) {
 	const [message, setMessage] = useState("");
 	const [banner, setBanner] = useState("");
 	const [bool, setBool] = useState(false);
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
 
 	const handleName = (e) => {
 		setName(e.target.value);
@@ -58,62 +63,74 @@ export default function ContactMe({ forwardRef, isVisible4 }) {
 	};
 
 	return (
-		<div
-			className={
-				isVisible4
-					? "main-container screen-container fade-in reveal"
-					: "main-container screen-container fade-in"
-			}
-			id="contact"
-			ref={forwardRef}
-		>
-			<ScreenHeading subHeading={"Prenons contact"} title={"Contactez-moi"} />
-			<div className="central-form">
-				<div className="col">
-					<h2 className="title">
-						<Typical loop={Infinity} steps={["Envoyez-moi un mail 📧", 2000]} />
-					</h2>{" "}
-					<a href="https://github.com/Hugo-Latreille" target="_blank">
-						<BsGithub className="i" color="white" size="1.2rem" />
-					</a>
-					<a href="https://www.linkedin.com/in/hugo-latreille/" target="_blank">
-						<BsLinkedin className="i" color="white" size="1.2rem" />
-					</a>
-				</div>
-				<div className="back-form">
-					<div className="img-back">
-						<h4>hugo.latreille@gmail.com</h4>
-						<img src={imgBack} alt="background email" />
+		<div className="about-container">
+			<HomeFooter />
+			<div
+				className={
+					isVisible4
+						? "main-container screen-container fade-in reveal"
+						: "main-container screen-container fade-in"
+				}
+				style={{
+					backgroundColor: darkMode ? "#26233a" : "rgba(25, 138, 153, 1)",
+				}}
+				id="contact"
+				ref={forwardRef}
+			>
+				<ScreenHeading subHeading={"Prenons contact"} title={"Contactez-moi"} />
+				<div className="central-form">
+					<div className="col">
+						<h2 className="title">
+							<Typical
+								loop={Infinity}
+								steps={["Envoyez-moi un mail 📧", 2000]}
+							/>
+						</h2>{" "}
+						<a href="https://github.com/Hugo-Latreille" target="_blank">
+							<BsGithub className="i" color="white" size="1.2rem" />
+						</a>
+						<a
+							href="https://www.linkedin.com/in/hugo-latreille/"
+							target="_blank"
+						>
+							<BsLinkedin className="i" color="white" size="1.2rem" />
+						</a>
 					</div>
-					<form onSubmit={submitForm}>
-						<p>{banner}</p>
-						<label htmlFor="name">Name</label>
-						<input type="text" onChange={handleName} value={name} />
-
-						<label htmlFor="email">Email</label>
-						<input type="email" onChange={handleEmail} value={email} />
-
-						<label htmlFor="message">Message</label>
-						<textarea type="text" onChange={handleMessage} value={message} />
-
-						<div className="send-btn">
-							<button type="submit">
-								send
-								<FaPaperPlane className="fa fa-paper-plane" />
-								{bool ? (
-									<b className="load">
-										<img src={load1} alt="chargement" />
-									</b>
-								) : (
-									""
-								)}
-							</button>
+					<div className="back-form">
+						<div className="img-back">
+							<h4>hugo.latreille@gmail.com</h4>
+							<img src={emailSVG} alt="background email" />
 						</div>
-					</form>
+						<form onSubmit={submitForm}>
+							<p>{banner}</p>
+							<label htmlFor="name">Name</label>
+							<input type="text" onChange={handleName} value={name} />
+
+							<label htmlFor="email">Email</label>
+							<input type="email" onChange={handleEmail} value={email} />
+
+							<label htmlFor="message">Message</label>
+							<textarea type="text" onChange={handleMessage} value={message} />
+
+							<div className="send-btn">
+								<button type="submit">
+									send
+									<FaPaperPlane className="fa fa-paper-plane" />
+									{bool ? (
+										<b className="load">
+											<img src={load1} alt="chargement" />
+										</b>
+									) : (
+										""
+									)}
+								</button>
+							</div>
+						</form>
+					</div>
 				</div>
+				<ToastContainer />
+				<Footer />
 			</div>
-			<ToastContainer />
-			<Footer />
 		</div>
 	);
 }

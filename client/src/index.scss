@@ -76,7 +76,7 @@ code {
 
 ::-webkit-scrollbar {
 	width: 6px !important;
-	height: 6px !important;
+	height: 0px !important;
 }
 
 body ::-webkit-scrollbar-thumb {
@@ -98,7 +98,7 @@ body ::-webkit-scrollbar-thumb {
 .fade-in {
 	opacity: 0;
 	transform: translateY(400px);
-	transition: all 1s ease;
+	transition: transform 1s ease, opacity 1s ease;
 }
 
 .fade-in.reveal {

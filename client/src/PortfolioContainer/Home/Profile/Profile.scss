@@ -63,14 +63,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 2px 0px 0px vars.$white;
+	// box-shadow: 0 2px 0px 0px vars.$white;
 	border-radius: 50%;
 	height: 380px;
 	width: 380px;
 	margin: 0 0px 0 100px;
+	z-index: 1;
 }
 .profile-picture-background {
-	height: 92%;
+	height: 100%;
 	width: 92%;
 	background-image: url("./../../../assets/avataaars.svg");
 	background-size: cover;
@@ -115,7 +116,7 @@
 	.profile-options .btn {
 		width: 120px;
 		padding: 11px 0;
-		z-index: 700;
+		z-index: 2;
 	}
 }
 @media only screen and (max-width: 910px) {
