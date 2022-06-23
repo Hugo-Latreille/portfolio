@@ -53,8 +53,7 @@
 		justify-content: center;
 		gap: 800px;
 		transition: all 1s ease-out;
-
-		// transform: translateX(1450px);
+		transform: translateX(1450px);
 		// gap + container width
 
 		// @include mobile {
@@ -69,7 +68,7 @@
 			align-items: center;
 			// justify-content: center;
 			height: 450px;
-			// transform: translate(-200px, 00px);
+			transform: translateX(1450px);
 
 			.item {
 				width: 100%;
