@@ -19,6 +19,9 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 							{props.fromDate + "-" + props.toDate}
 						</div>
 					)}
+					{!props.fromDate && props.toDate && (
+						<div className="heading-date">{props.toDate}</div>
+					)}
 				</div>
 				<div className="resume-sub-heading">
 					<span>{props.subHeading ? props.subHeading : ""}</span>
@@ -32,11 +35,11 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 
 	/* STATIC RESUME DATA FOR THE LABELS*/
 	const resumeBullets = [
-		{ label: "Education", logoSrc: "education.svg" },
-		{ label: "Work History", logoSrc: "work-history.svg" },
-		{ label: "Programming Skills", logoSrc: "programming-skills.svg" },
-		{ label: "Projects", logoSrc: "projects.svg" },
-		{ label: "Interests", logoSrc: "interests.svg" },
+		{ label: "Formation", logoSrc: "education.svg" },
+		{ label: "Expériences Professionnelles", logoSrc: "work-history.svg" },
+		{ label: "Compétences", logoSrc: "programming-skills.svg" },
+		{ label: "Projets", logoSrc: "projects.svg" },
+		{ label: "Centres d'intérêt", logoSrc: "interests.svg" },
 	];
 
 	//here we have
@@ -81,23 +84,37 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 	const resumeDetails = [
 		<div className="resume-screen-container" key="education">
 			<ResumeHeading
-				heading={"University of Legon Accra, Ghana"}
-				subHeading={"BACHELOR OF SCIENCE INFORMATION TECHNOLOGY"}
-				fromDate={"2014"}
-				toDate={"2018"}
+				heading={"École O'clock"}
+				subHeading={
+					"Formation Développeur FullStack JavaScript, spécialisation React"
+				}
+				fromDate={""}
+				toDate={"2022"}
 			/>
 
 			<ResumeHeading
-				heading={"National Youth Service Corps"}
-				subHeading={"Ministry Of Science And Technogy. Uyo Akwa Ibom State"}
-				fromDate={"2019"}
-				toDate={"2020"}
+				heading={"Brevet Professionnel de Libraire"}
+				subHeading={"Institut National de Formation des Libraires, Montreuil"}
+				fromDate={"2012"}
+				toDate={"2014"}
 			/>
 			<ResumeHeading
-				heading={"High School "}
-				subHeading={"Command Secondary School Mbiri"}
-				fromDate={"2007"}
-				toDate={"2012"}
+				heading={"Master Journalisme"}
+				subHeading={"Institut d’Études Politiques de Grenoble"}
+				fromDate={"2006"}
+				toDate={"2008"}
+			/>
+			<ResumeHeading
+				heading={"Section Politique et Économie Sociale"}
+				subHeading={"Institut d’Études Politiques de Grenoble"}
+				fromDate={"2004"}
+				toDate={"2006"}
+			/>
+			<ResumeHeading
+				heading={"Hypokhâgne-Khâgne Lettres et Sciences Sociales"}
+				subHeading={"Lycée Michel de Montaigne, Bordeaux"}
+				fromDate={"2002"}
+				toDate={"2004"}
 			/>
 		</div>,
 
@@ -240,7 +257,10 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 						: "resume-content fade-in"
 				}
 			>
-				<ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
+				<ScreenHeading
+					title={"CV"}
+					subHeading={"Développeur Fullstack JavaScript"}
+				/>
 				<div className="resume-card">
 					<div className="resume-bullets">
 						<div className="bullet-container">

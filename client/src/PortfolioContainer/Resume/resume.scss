@@ -17,7 +17,7 @@
 }
 
 .resume-bullets {
-	box-shadow: 15px 0 9px -15px #1f2235;
+	box-shadow: 15px 0 9px -15px vars.$background-light;
 	height: 100%;
 	width: 320px;
 }
@@ -60,7 +60,7 @@
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	background-color: #1f2235;
+	background-color: vars.$background-light;
 	height: 40px;
 	margin: 15px 0;
 	padding: 0 8px;
@@ -84,12 +84,12 @@
 	width: 34px;
 	height: 100%;
 	z-index: 1;
-	background-color: #1f2235;
+	background-color: vars.$background-light;
 	position: absolute;
 }
 
 .selected-bullet {
-	color: vars.$white;
+	color: vars.$title-color;
 	width: 100%;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .resume-main-heading span {
-	color: vars.$dark-orange;
+	color: vars.$background-light;
 	font-size: 16px;
 	font-family: "Poppins SemiBold";
 }
@@ -129,7 +129,7 @@
 	width: 15px;
 	top: 5px;
 	border-radius: 50%;
-	background-color: #ff5823;
+	background-color: vars.$background-light;
 }
 
 .resume-sub-heading {
@@ -145,7 +145,7 @@
 }
 
 .heading-date {
-	background-color: #ff5823;
+	background-color: vars.$title-color;
 	padding: 4px 12px;
 	font-size: 14px;
 	border-radius: 14px;

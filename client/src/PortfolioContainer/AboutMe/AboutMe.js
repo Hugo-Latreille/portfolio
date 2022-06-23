@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react-hooks/exhaustive-deps */
 import "./AboutMe.scss";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
@@ -5,17 +6,18 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 const AboutMe = ({ forwardRef, isVisible }) => {
 	const SCREEN_CONSTANTS = {
 		description:
-			"Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.",
+			"Ancien journaliste et libraire, je suis avec passion la formation Développeur JavaScript FullStack avec l'école O'clock pour 6 mois.",
 		highlights: {
 			bullets: [
-				"Full Stack web and mobile development",
-				"Interactive Front End as per the design",
-				"React and React Native",
-				"Redux for State Mnanagement",
-				"Building REST API",
-				"Managing database",
+				"HTML5, CSS3(SASS)",
+				"ReactJS, Redux, JavaScript Vanilla",
+				"NodeJs, Express, PostGreSQL, MongoDB, Socket.io, MVP, API REST",
+				"Git/GitHub",
+				"Curieux / Autonome / Travail d'équipe / Communication",
+				"Anglais courant",
+				"Capacité de synthèse et de recherche documentaire",
 			],
-			heading: "Here are a Few Highlights:",
+			heading: "Mes compétences : ",
 		},
 	};
 	const renderHighlight = () => {
@@ -55,10 +57,12 @@ const AboutMe = ({ forwardRef, isVisible }) => {
 						</div>
 						<div className="about-me-options">
 							<a href="#contact">
-								<button className="btn primary-btn"> Hire Me </button>
+								<button className="btn primary-btn"> Prendre contact </button>
 							</a>
-							<a href="ehizcv.pdf" download="Ehiedu Ehizcv.pdf">
-								<button className="btn highlighted-btn">Get Resume</button>
+							<a href="/CV2022.pdf" download="CVHugo.pdf">
+								<button className="btn highlighted-btn">
+									Téléchargez mon CV
+								</button>
 							</a>
 						</div>
 					</div>
