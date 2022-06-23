@@ -38,7 +38,9 @@ const Header = ({
 					}
 				>
 					<span>
-						<a href="#home">Hugo~</a>
+						<a href="#home">
+							Hugo<span style={{ color: "#F39C12" }}>~</span>
+						</a>
 					</span>
 				</div>
 				<div

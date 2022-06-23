@@ -63,14 +63,16 @@ export default function ContactMe({ forwardRef, isVisible4 }) {
 	};
 
 	return (
-		<div className="about-container">
+		<div
+			className={
+				isVisible4
+					? "about-container fade-in reveal"
+					: "about-container fade-in"
+			}
+		>
 			<HomeFooter />
 			<div
-				className={
-					isVisible4
-						? "main-container screen-container fade-in reveal"
-						: "main-container screen-container fade-in"
-				}
+				className="main-container screen-container"
 				style={{
 					backgroundColor: darkMode ? "#26233a" : "rgba(25, 138, 153, 1)",
 				}}

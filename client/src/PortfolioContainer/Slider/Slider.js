@@ -48,7 +48,7 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 				/>
 				<div
 					className="slider"
-					style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
+					style={{ transform: `translateX(-${currentSlide * 1450}px)` }}
 				>
 					{data.map((d) => (
 						<div className="container" key={d.id}>

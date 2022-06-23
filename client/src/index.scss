@@ -63,7 +63,7 @@ body {
 }
 
 #root {
-	scroll-snap-type: y mandatory;
+	// scroll-snap-type: y mandatory;
 	overflow-y: scroll;
 	scroll-behavior: smooth;
 	height: 100vh;
@@ -80,7 +80,7 @@ code {
 }
 
 body ::-webkit-scrollbar-thumb {
-	background-color: hsla(0, 0%, 100%, 0.16);
+	background-color: hsla(37, 90%, 51%, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {

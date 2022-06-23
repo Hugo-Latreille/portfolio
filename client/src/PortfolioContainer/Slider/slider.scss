@@ -1,13 +1,12 @@
 @use "src/vars";
 
 .slider-container {
-	background-color: white;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 25rem;
+	// display: flex;
+	// flex-direction: column;
 	// justify-content: center;
-	height: 70vh;
+	// align-items: center;
+	height: 95vh;
+	position: relative;
 	scroll-snap-align: start;
 
 	.arrow {
@@ -22,22 +21,24 @@
 		// }
 
 		&.left {
-			left: -70px;
-			top: 350px;
-			// transform: rotateY(180deg);
+			top: 50%;
+			transform: translateX(-450px);
 		}
 
 		&.right {
-			right: -40px;
-			top: 350px;
+			top: 50%;
+			transform: translateX(450px);
 		}
 	}
 
 	.slider-parent {
-		max-width: 800px;
-
-		width: 70%;
-		position: relative;
+		// max-width: 800px;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		// display: flex;
 		// flex-direction: column;
 		// align-items: center;
@@ -46,11 +47,15 @@
 
 	.slider {
 		height: 550px;
+		// width: 100vw;
 		display: flex;
-		position: absolute;
-		left: 0;
-		top: 150px;
+		align-items: center;
+		justify-content: center;
+		gap: 800px;
 		transition: all 1s ease-out;
+
+		// transform: translateX(1450px);
+		// gap + container width
 
 		// @include mobile {
 		// 	height: 100vh;
@@ -59,15 +64,15 @@
 		// }
 
 		.container {
-			width: 100vw;
+			width: 650px;
 			display: flex;
 			align-items: center;
-			justify-content: center;
-			height: 35vh;
-			transform: translate(-200px, 00px);
+			// justify-content: center;
+			height: 450px;
+			// transform: translate(-200px, 00px);
 
 			.item {
-				width: 700px;
+				width: 100%;
 				height: 100%;
 				background-color: white;
 				border-radius: 20px;
@@ -78,6 +83,7 @@
 				justify-content: center;
 				position: relative;
 				border: 1px solid grey;
+				overflow: hidden;
 
 				// @include mobile {
 				// 	width: 80%;
