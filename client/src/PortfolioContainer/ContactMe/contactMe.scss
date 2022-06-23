@@ -3,26 +3,30 @@
 .about-container {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 95vh;
+	// align-items: center;
+	// justify-content: flex-end;
+	// height: 90vh;
 	scroll-snap-align: start;
 }
 
 .main-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	height: 80%;
+	min-height: fit-content;
+	height: 900px;
 	width: 100%;
+}
 
-	// margin: 200px 0 -450px 0;
+.footer_svg {
+	transform: rotate(180deg);
+	width: 100%;
 }
 
 .central-form {
-	width: 60vw;
-	min-width: 750px;
+	// width: 60vw;
+	// min-width: 750px;
+	width: 1000px;
 	padding: 10px;
 	display: flex;
 	box-shadow: 0 0px 20px -2px #1f2235;
