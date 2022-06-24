@@ -38,7 +38,7 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 		{ label: "Formation", logoSrc: "education.svg" },
 		{ label: "Expériences Professionnelles", logoSrc: "work-history.svg" },
 		{ label: "Compétences", logoSrc: "programming-skills.svg" },
-		{ label: "Projets", logoSrc: "projects.svg" },
+		{ label: "Soft Skills", logoSrc: "projects.svg" },
 		{ label: "Centres d'intérêt", logoSrc: "interests.svg" },
 	];
 
@@ -46,48 +46,41 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 	const programmingSkillsDetails = [
 		{ skill: "JavaScript", ratingPercentage: 85 },
 		{ skill: "React JS", ratingPercentage: 85 },
-		{ skill: "React Native", ratingPercentage: 85 },
 		{ skill: "Express JS", ratingPercentage: 89 },
 		{ skill: "Node JS", ratingPercentage: 89 },
 		{ skill: "Mongo Db", ratingPercentage: 70 },
-		{ skill: "Core Java", ratingPercentage: 80 },
 		{ skill: "HTML", ratingPercentage: 80 },
 		{ skill: "CSS", ratingPercentage: 80 },
+		{ skill: "Redux", ratingPercentage: 80 },
+		{ skill: "PostgreSQL, Sequelize", ratingPercentage: 80 },
+		{ skill: "Git", ratingPercentage: 80 },
 	];
 
 	const projectsDetails = [
 		{
-			title: "Personal Portfolio Website",
-			duration: { fromDate: "2020", toDate: "2021" },
-			description:
-				"A Personal Portfolio website to showcase all my details and projects at one place.",
-			subHeading: "Technologies Used: React JS, Bootsrap",
+			title: "Anglais courant, lu, parlé, écrit",
 		},
 		{
-			title: "Mobile E-shop ",
-			duration: { fromDate: "2020", toDate: "2021" },
-			description:
-				"An ecommerce application designed to sell products online wth payment system integration",
-			subHeading:
-				"Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.",
+			title: "Maîtrise du code ortho-typographique français",
 		},
 		{
-			title: "Ecommerce Website ",
-			duration: { fromDate: "2020", toDate: "2021" },
-			description:
-				"Online ecommerce website for showcasing and selling products onlne with payment system integration, both Paypal and Stripe",
-			subHeading:
-				"Technologies Used: Mongo DB, Epress Js, React Js, Node JS, Redux, Bootstrap.",
+			title: "Adaptable / curieux / autonome",
+		},
+		{
+			title: "Capacité de synthèse et de recherche documentaire",
+		},
+		{
+			title: "Coordination d'une équipe, sens de l'organisation",
 		},
 	];
 
 	const resumeDetails = [
 		<div className="resume-screen-container" key="education">
 			<ResumeHeading
-				heading={"École O'clock"}
-				subHeading={
+				heading={
 					"Formation Développeur FullStack JavaScript, spécialisation React"
 				}
+				subHeading={"École O'clock"}
 				fromDate={""}
 				toDate={"2022"}
 			/>
@@ -122,33 +115,58 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 		<div className="resume-screen-container" key="work-experience">
 			<div className="experience-container">
 				<ResumeHeading
-					heading={"Ehizeex Technoloy"}
-					subHeading={"FULL STACK DEVELOPER INTERN"}
-					fromDate={"2021"}
-					toDate={"Present"}
+					heading={"École O'clock"}
+					subHeading={"Développeur React"}
+					// fromDate={"2021"}
+					toDate={"2022"}
 				/>
 				<div className="experience-description">
 					<span className="resume-description-text">
-						Currently working as MERN stack web and mobile developer and also an
-						online instructor on udemy.
+						Apothéose, projet fullstack d'un mois en groupe de 5. Challenges
+						quotidiens
 					</span>
 				</div>
+				<ResumeHeading
+					heading={"Libraire"}
+					subHeading={
+						"Librairie Nouvelle, Asnières-sur-Seine / Librairie Vent de Soleil, Auray - CDI"
+					}
+					fromDate={"2012"}
+					toDate={"2020"}
+				/>
 				<div className="experience-description">
 					<span className="resume-description-text">
-						- Developed an ecommerce website for client with the dashboard for
-						managing the products, managing reviews, users, payment etc. .
+						- Responsable d’une équipe de 5 libraires, maître d’apprentissage de
+						deux apprentis, libraire Littérature et Sciences Humaines
 					</span>
 					<br />
 					<span className="resume-description-text">
-						- Integrated the web app with backend services to create new user
-						onboarding application with dynamic form content.{" "}
+						- Recherches bibliographiques, gestions des réseaux sociaux et des
+						sites web.
+					</span>
+				</div>
+				<ResumeHeading
+					heading={"Journaliste"}
+					subHeading={
+						"Collaboration avec la Revue Médias et les éditions Mordicus / Agence Webcastory"
+					}
+					fromDate={"2008"}
+					toDate={"2011"}
+				/>
+				<div className="experience-description">
+					<span className="resume-description-text">
+						- Rédaction : articles, brèves, interviews
 					</span>
 					<br />
 					<span className="resume-description-text">
-						- I stretch my mental capacity to develope UI as per the given
-						designs.
+						- Gestion des sites internet / Webmaster éditorial, organisation
+						d’émissions WebTv et réalisation de podcasts
 					</span>
 					<br />
+					<span className="resume-description-text">
+						- Stages : Aujourdhuilinde.com (New Delhi, 2008) / Rue89.com (2007,
+						Paris) / Journal Sud Ouest (La Rochelle, Royan 2003-2005)
+					</span>
 				</div>
 			</div>
 		</div>,
@@ -178,10 +196,10 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 				<ResumeHeading
 					key={index}
 					heading={projectsDetails.title}
-					subHeading={projectsDetails.subHeading}
-					description={projectsDetails.description}
-					fromDate={projectsDetails.duration.fromDate}
-					toDate={projectsDetails.duration.toDate}
+					// subHeading={projectsDetails.subHeading}
+					// description={projectsDetails.description}
+					// fromDate={projectsDetails.duration.fromDate}
+					// toDate={projectsDetails.duration.toDate}
 				/>
 			))}
 		</div>,
@@ -189,17 +207,15 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 		/* Interests */
 		<div className="resume-screen-container" key="interests">
 			<ResumeHeading
-				heading="Teaching"
-				description="Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing."
+				heading="Voyages"
+				description="Séjours de longue durée en Chine et en Inde , nombreux voyages en Europe."
 			/>
 			<ResumeHeading
-				heading="Music"
-				description="Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on."
+				heading="Associatif"
+				description="Fondateur de l’association littéraire de l’IEP de Grenoble : L’Entre Deux Lettres. Réalisation de cinq numéros de sa revue.
+			 "
 			/>
-			<ResumeHeading
-				heading="Competitive Gaming"
-				description="I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most."
-			/>
+			<ResumeHeading heading="Photographie / Littérature" />
 		</div>,
 	];
 

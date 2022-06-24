@@ -104,6 +104,7 @@
 .resume-heading {
 	display: flex;
 	flex-direction: column;
+	margin-top: 1rem;
 }
 
 .resume-main-heading {
@@ -127,7 +128,7 @@
 	left: -30px;
 	height: 15px;
 	width: 15px;
-	top: 5px;
+	top: 1px;
 	border-radius: 50%;
 	background-color: vars.$background-light;
 }
