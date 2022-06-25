@@ -44,21 +44,24 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 
 	//here we have
 	const programmingSkillsDetails = [
-		{ skill: "JavaScript", ratingPercentage: 85 },
-		{ skill: "React JS", ratingPercentage: 85 },
-		{ skill: "Express JS", ratingPercentage: 89 },
-		{ skill: "Node JS", ratingPercentage: 89 },
-		{ skill: "Mongo Db", ratingPercentage: 70 },
-		{ skill: "HTML", ratingPercentage: 80 },
-		{ skill: "CSS", ratingPercentage: 80 },
-		{ skill: "Redux", ratingPercentage: 80 },
-		{ skill: "PostgreSQL, Sequelize", ratingPercentage: 80 },
-		{ skill: "Git", ratingPercentage: 80 },
+		{ skill: "JavaScript", logoSrc: "js.svg" },
+		{ skill: "React JS", logoSrc: "react.svg" },
+		{ skill: "Express JS", logoSrc: "expressjs.svg" },
+		{ skill: "Node JS", logoSrc: "nodejs.svg" },
+		{ skill: "Mongo Db", logoSrc: "mongodb.svg" },
+		{ skill: "HTML", logoSrc: "html5.svg" },
+		{ skill: "CSS", logoSrc: "css3.svg" },
+		{ skill: "Redux", logoSrc: "redux.svg" },
+		{ skill: "PostgreSQL, Sequelize", logoSrc: "postgresql-vertical.svg" },
+		{ skill: "Git", logoSrc: "git.svg" },
 	];
 
 	const projectsDetails = [
 		{
-			title: "Anglais courant, lu, parlé, écrit",
+			title: "Coordination d'une équipe, sens de l'organisation",
+		},
+		{
+			title: "Capacité de synthèse et de recherche documentaire",
 		},
 		{
 			title: "Maîtrise du code ortho-typographique français",
@@ -67,10 +70,7 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 			title: "Adaptable / curieux / autonome",
 		},
 		{
-			title: "Capacité de synthèse et de recherche documentaire",
-		},
-		{
-			title: "Coordination d'une équipe, sens de l'organisation",
+			title: "Anglais courant, lu, parlé, écrit",
 		},
 	];
 
@@ -180,12 +180,17 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 				<div className="skill-parent" key={index}>
 					<div className="heading-bullet"></div>
 					<span>{skill.skill}</span>
-					<div className="skill-percentage">
+					<img
+						className="skill-logo"
+						src={require(`../../assets/Resume/icons/${skill.logoSrc}`)}
+						alt="B"
+					/>
+					{/* <div className="skill-percentage">
 						<div
 							style={{ width: skill.ratingPercentage + "%" }}
 							className="active-percentage-bar"
 						></div>
-					</div>
+					</div> */}
 				</div>
 			))}
 		</div>,
