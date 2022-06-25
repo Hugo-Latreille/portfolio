@@ -1,9 +1,12 @@
 import "./slider.scss";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { MdOutlineArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
+import { ThemeContext } from "../../context";
 
 const Slider = ({ forwardRef, isVisible3 }) => {
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const data = [
 		{
@@ -36,7 +39,14 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 	};
 
 	return (
-		<div className="slider-container" id="slider" ref={forwardRef}>
+		<div
+			className="slider-container"
+			id="slider"
+			ref={forwardRef}
+			style={{
+				backgroundColor: darkMode ? "#32364d" : "white",
+			}}
+		>
 			<div
 				className={
 					isVisible3 ? "slider-parent fade-in reveal" : "slider-parent fade-in"

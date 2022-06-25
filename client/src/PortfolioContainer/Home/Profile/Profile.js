@@ -14,7 +14,7 @@ const Profile = (props) => {
 		<div
 			className="profile-container"
 			style={{
-				backgroundColor: darkMode ? "#26233a" : "rgba(25, 138, 153, 1)",
+				backgroundColor: darkMode ? "#2e517a" : "rgba(25, 138, 153, 1)",
 			}}
 		>
 			<div className="profile-parent">

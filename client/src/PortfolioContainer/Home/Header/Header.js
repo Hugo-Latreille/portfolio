@@ -20,7 +20,7 @@ const Header = ({
 	return (
 		<div
 			style={{
-				backgroundColor: darkMode ? "#26233a" : "rgba(25, 138, 153, 1)",
+				backgroundColor: darkMode ? "#2e517a" : "rgba(25, 138, 153, 1)",
 			}}
 			className="header-container"
 			onClick={() => setHamburgerOptions(!hamburgerOptions)}
@@ -51,12 +51,6 @@ const Header = ({
 					}
 				>
 					<div
-						// className={
-						// 	selected === 1
-						// 		? "header-option header-option-separator selected-header-option"
-						// 		: "header-option header-option-separator"
-						// }
-						// onClick={() => setSelected(1)}
 						className={
 							isVisible
 								? "header-option header-option-separator selected-header-option"
@@ -68,12 +62,6 @@ const Header = ({
 						</span>
 					</div>
 					<div
-						// className={
-						// 	selected === 2
-						// 		? "header-option header-option-separator selected-header-option"
-						// 		: "header-option header-option-separator"
-						// }
-						// onClick={() => setSelected(2)}
 						className={
 							isVisible2
 								? "header-option header-option-separator selected-header-option"
@@ -85,12 +73,6 @@ const Header = ({
 						</span>
 					</div>
 					<div
-						// className={
-						// 	selected === 3
-						// 		? "header-option header-option-separator selected-header-option"
-						// 		: "header-option header-option-separator"
-						// }
-						// onClick={() => setSelected(3)}
 						className={
 							isVisible3
 								? "header-option header-option-separator selected-header-option"
@@ -102,12 +84,6 @@ const Header = ({
 						</span>
 					</div>
 					<div
-						// className={
-						// 	selected === 4
-						// 		? "header-option header-option-separator selected-header-option"
-						// 		: "header-option header-option-separator"
-						// }
-						// onClick={() => setSelected(4)}
 						className={
 							isVisible4
 								? "header-option header-option-separator selected-header-option"

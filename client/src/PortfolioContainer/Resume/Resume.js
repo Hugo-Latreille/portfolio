@@ -1,11 +1,14 @@
 import "./resume.scss";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../../context";
 
 const Resume = ({ forwardRef, isVisible2 }) => {
 	/* STATES */
 	const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
 	const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
 
 	/* REUSABLE MINOR COMPONENTS */
 	const ResumeHeading = (props) => {
@@ -268,6 +271,9 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 	return (
 		<div
 			className="resume-container screen-container "
+			style={{
+				backgroundColor: darkMode ? "#32364d" : "white",
+			}}
 			id="resume"
 			ref={forwardRef}
 		>

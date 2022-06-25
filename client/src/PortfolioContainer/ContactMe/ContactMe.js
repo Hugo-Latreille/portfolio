@@ -73,7 +73,7 @@ export default function ContactMe({ forwardRef, isVisible4 }) {
 			<div
 				className="main-container screen-container"
 				style={{
-					backgroundColor: darkMode ? "#26233a" : "rgba(25, 138, 153, 1)",
+					backgroundColor: darkMode ? "#2e517a" : "rgba(25, 138, 153, 1)",
 				}}
 				id="contact"
 				ref={forwardRef}

@@ -2,8 +2,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "./AboutMe.scss";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
+import { useContext } from "react";
+import { ThemeContext } from "../../context";
 
 const AboutMe = ({ forwardRef, isVisible }) => {
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
+
 	const SCREEN_CONSTANTS = {
 		description:
 			"Ancien journaliste et libraire, je suis avec passion la formation Développeur JavaScript FullStack avec l'école O'clock pour 6 mois.",
@@ -34,6 +39,9 @@ const AboutMe = ({ forwardRef, isVisible }) => {
 			className="about-me-container screen-container"
 			id="about"
 			ref={forwardRef}
+			style={{
+				backgroundColor: darkMode ? "#32364d" : "white",
+			}}
 		>
 			<div
 				className={

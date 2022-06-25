@@ -18,8 +18,8 @@ const Toggle = () => {
 			<div
 				className="toggle__button"
 				style={{
-					left: theme.state.darkMode ? "0" : "25px",
-					backgroundColor: darkMode ? "rgba(25, 138, 153, 1)" : "#26233a",
+					left: theme.state.darkMode ? "25px" : "0",
+					backgroundColor: darkMode ? "rgba(25, 138, 153, 1)" : "#2e517a",
 				}}
 			></div>
 		</div>
