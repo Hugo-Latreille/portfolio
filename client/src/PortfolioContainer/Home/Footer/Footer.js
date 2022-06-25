@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../../context";
 import "./footer.scss";
 
-const HomeFooter = ({ home }) => {
+const HomeFooter = () => {
 	const theme = useContext(ThemeContext);
 	const darkMode = theme.state.darkMode;
 	return (
@@ -11,7 +11,6 @@ const HomeFooter = ({ home }) => {
 				{/* <img src={background} alt="background shape" /> */}
 				{/* <img src={wave} alt="background shape" /> */}
 				<svg
-					className={home ? "" : "rotate"}
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 1440 320"
 					style={{
@@ -26,13 +25,12 @@ const HomeFooter = ({ home }) => {
 				</svg>
 				{/* <div className="background-image"></div> */}
 			</div>
-			{home && (
-				<div className="mouse-icon">
-					<span className="mouse">
-						<span className="wheel"></span>
-					</span>
-				</div>
-			)}
+
+			<div className="mouse-icon">
+				<span className="mouse">
+					<span className="wheel"></span>
+				</span>
+			</div>
 		</div>
 	);
 };

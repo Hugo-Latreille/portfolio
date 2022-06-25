@@ -42,7 +42,7 @@ const Home = ({
 				isVisible5={isVisible5}
 			/>
 			<Profile />
-			<HomeFooter home />
+			<HomeFooter />
 			<div className="parallax" data-relative-input="true">
 				<ApiSVG
 					width="27"

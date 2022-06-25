@@ -3,9 +3,8 @@
 .about-container {
 	display: flex;
 	flex-direction: column;
-	// align-items: center;
-	// justify-content: flex-end;
-	// height: 90vh;
+	height: 95vh;
+	position: relative;
 	scroll-snap-align: start;
 }
 
@@ -13,15 +12,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-height: fit-content;
-	height: 900px;
-	width: 100%;
-}
 
-.footer_svg {
-	display: block;
-	transform: rotate(180deg);
-	width: 100%;
+	height: 80%;
+	min-height: fit-content;
+	position: relative;
+	background-color: vars.$background-light;
+	position: relative;
 }
 
 .central-form {

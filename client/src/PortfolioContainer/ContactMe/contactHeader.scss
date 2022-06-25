@@ -1,0 +1,11 @@
+@use "src/vars";
+
+.contact-header {
+	height: 20%;
+	position: relative;
+	transform: rotate(180deg);
+}
+
+.contact_header svg {
+	background-color: vars.$background-color;
+}
