@@ -63,18 +63,18 @@ export default function ContactMe({ forwardRef, isVisible4 }) {
 
 	return (
 		<div
-			className={
-				isVisible4
-					? "about-container fade-in reveal"
-					: "about-container fade-in"
-			}
+			className="about-container"
+			style={{
+				backgroundColor: darkMode ? "#2e517a" : "rgba(25, 138, 153, 1)",
+			}}
 		>
 			<ContactHeader />
 			<div
-				className="main-container screen-container"
-				style={{
-					backgroundColor: darkMode ? "#2e517a" : "rgba(25, 138, 153, 1)",
-				}}
+				className={
+					isVisible4
+						? "main-container fade-in--last reveal"
+						: "main-container fade-in--last"
+				}
 				id="contact"
 				ref={forwardRef}
 			>

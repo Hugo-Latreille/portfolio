@@ -105,3 +105,12 @@ body ::-webkit-scrollbar-thumb {
 	opacity: 1;
 	transform: translateY(0px);
 }
+
+.fade-in--last {
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.fade-in--last.reveal {
+	opacity: 1;
+}

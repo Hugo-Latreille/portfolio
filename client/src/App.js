@@ -6,6 +6,8 @@ import Resume from "./PortfolioContainer/Resume/Resume";
 import ContactMe from "./PortfolioContainer/ContactMe/ContactMe";
 import { useObserver } from "./utilities/scrollObserver";
 import ReactCursorPosition from "react-cursor-position";
+import { useContext } from "react";
+import { ThemeContext } from "./context";
 // import Testimonial from "./PortfolioContainer/Testimonial/Testimonial";
 
 function App() {
@@ -35,6 +37,9 @@ function App() {
 		threshold: 0.6,
 	});
 
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
+
 	// useEffect(() => {
 	// 	console.log(testRef2.current);
 	// 	console.log(isVisible2);
@@ -45,7 +50,13 @@ function App() {
 	// }, [testRef, isVisible, isRevealed]);
 
 	return (
-		<div className="App" id="app">
+		<div
+			className="App"
+			id="app"
+			style={{
+				backgroundColor: darkMode ? "#32364d" : "white",
+			}}
+		>
 			{/* <PortfolioContainer /> */}
 			<ReactCursorPosition>
 				<Home
