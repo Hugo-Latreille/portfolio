@@ -6,12 +6,12 @@
 	margin: auto;
 	overflow: hidden;
 	flex-direction: column;
-	bottom: 200px;
+	bottom: 165px;
 	z-index: 1;
 }
-@media only screen and (min-width: 475px) {
+@media only screen and (max-width: 1000px) {
 	.scroll-container {
-		margin-bottom: 10px;
+		bottom: -165px;
 	}
 }
 .btn-scroll {

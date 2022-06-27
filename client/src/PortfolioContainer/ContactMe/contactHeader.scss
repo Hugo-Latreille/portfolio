@@ -9,3 +9,8 @@
 .contact_header svg {
 	background-color: vars.$background-color;
 }
+@media only screen and (max-width: 1000px) {
+	.contact-header {
+		display: none;
+	}
+}
