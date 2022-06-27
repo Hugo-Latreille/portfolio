@@ -11,16 +11,16 @@ const AboutMe = ({ forwardRef, isVisible }) => {
 
 	const SCREEN_CONSTANTS = {
 		description:
-			"Ancien journaliste et libraire, je suis avec passion la formation Développeur JavaScript FullStack avec l'école O'clock pour 6 mois.",
+			"Ancien libraire et journaliste, je suis avec passion la formation Développeur JavaScript FullStack de l'école O'clock pour 6 mois.",
 		highlights: {
 			bullets: [
 				"HTML5, CSS3(SASS)",
 				"ReactJS, Redux, JavaScript Vanilla",
 				"NodeJs, Express, PostGreSQL, MongoDB, Socket.io, MVP, API REST",
 				"Git/GitHub",
+				"Capacité de synthèse et de recherche documentaire",
 				"Curieux / Autonome / Travail d'équipe / Communication",
 				"Anglais courant",
-				"Capacité de synthèse et de recherche documentaire",
 			],
 			heading: "Mes compétences : ",
 		},
