@@ -9,6 +9,17 @@
 	// justify-content: space-between;
 	// min-height: 670px;
 }
+@media only screen and (max-width: 1000px) {
+	.parallax {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 810px) {
+	.home-container {
+		height: fit-content;
+	}
+}
 
 .parallax {
 	position: absolute;

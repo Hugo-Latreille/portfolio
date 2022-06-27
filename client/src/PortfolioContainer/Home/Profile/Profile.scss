@@ -56,8 +56,8 @@
 }
 .profile-options .highlighted-btn:hover {
 	margin: 0 0 0 28px;
-	background-color: cornsilk;
-	color: #111111;
+	background-color: vars.$background-dark;
+	color: white;
 }
 .profile-picture {
 	display: flex;
@@ -104,6 +104,10 @@
 	.profile-picture {
 		margin: 0 0px 0 80px;
 	}
+	.profile-picture-background {
+		height: 50%;
+		width: 50%;
+	}
 	.colz-icon {
 		margin-top: 1rem;
 	}
@@ -114,7 +118,7 @@
 		font: 12px;
 	}
 	.profile-options .btn {
-		width: 120px;
+		width: 145px;
 		padding: 11px 0;
 		z-index: 2;
 	}
@@ -135,7 +139,6 @@
 	}
 	.profile-parent {
 		flex-direction: column-reverse;
-		// margin: 120px 0 0 0;
 	}
 	.profile-options {
 		display: flex;
@@ -192,7 +195,7 @@
 .primary-btn:hover {
 	color: aliceblue;
 	border: 2px solid vars.$title-color;
-	background-color: #1f2235;
+	background-color: vars.$background-dark;
 }
 
 .highlighted-btn {
@@ -201,6 +204,7 @@
 	background-color: vars.$title-color;
 	border: none;
 }
+
 @media only screen and (max-width: 568px) {
 	.highlighted-btn {
 		z-index: -900;

@@ -1,10 +1,6 @@
 @use "src/vars";
 
 .slider-container {
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
-	// align-items: center;
 	height: 95vh;
 	position: relative;
 	scroll-snap-align: start;
@@ -15,10 +11,6 @@
 		position: absolute;
 		cursor: pointer;
 		color: orange;
-
-		// @include mobile {
-		// 	display: none;
-		// }
 
 		&.left {
 			top: 50%;
@@ -53,20 +45,12 @@
 		justify-content: center;
 		gap: 800px;
 		transition: all 1s ease-out;
-		transform: translateX(1450px);
 		// gap + container width
-
-		// @include mobile {
-		// 	height: 100vh;
-		// 	flex-direction: column;
-		// 	justify-content: center;
-		// }
 
 		.container {
 			width: 650px;
 			display: flex;
 			align-items: center;
-			// justify-content: center;
 			height: 450px;
 			transform: translateX(1450px);
 
@@ -83,12 +67,6 @@
 				position: relative;
 				border: 1px solid grey;
 				overflow: hidden;
-
-				// @include mobile {
-				// 	width: 80%;
-				// 	height: 150px;
-				// 	margin: 15px 0;
-				// }
 
 				.browser {
 					height: 20px;
@@ -136,7 +114,7 @@
 							width: 40px;
 							height: 40px;
 							border-radius: 50%;
-							background-color: rgb(245, 179, 155);
+							background-color: vars.$background-light;
 							display: flex;
 							align-items: center;
 							justify-content: center;
@@ -194,5 +172,30 @@
 				}
 			}
 		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.arrow {
+		display: none;
+	}
+
+	.slider-container {
+		height: fit-content;
+		margin-top: 5rem;
+	}
+
+	.slider-container .slider {
+		height: 100vh;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.slider-container .slider .container {
+		width: 80%;
+		transform: translateX(0px);
+	}
+	.slider-container .slider .container .item .right img {
+		width: 100%;
 	}
 }

@@ -6,9 +6,9 @@
 	position: relative;
 }
 
-.footer-parent svg {
-	// background-color: vars.$background-color;
-}
+// .footer-parent svg {
+// 	// background-color: vars.$background-color;
+// }
 
 .rotate {
 	transform: rotate(180deg);
@@ -73,8 +73,8 @@
 	}
 }
 
-@media only screen and (max-width: 810px) {
-	.footer-container {
-		// margin-top: 150px;
+@media only screen and (max-width: 1000px) {
+	.mouse-icon {
+		display: none;
 	}
 }

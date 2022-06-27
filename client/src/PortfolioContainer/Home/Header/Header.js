@@ -23,7 +23,6 @@ const Header = ({
 				backgroundColor: darkMode ? "#2e517a" : "rgba(25, 138, 153, 1)",
 			}}
 			className="header-container"
-			onClick={() => setHamburgerOptions(!hamburgerOptions)}
 		>
 			<div className="header-parent">
 				<div
@@ -49,6 +48,7 @@ const Header = ({
 							? "header-options show-hamburger-options"
 							: "header-options"
 					}
+					onClick={() => setHamburgerOptions(!hamburgerOptions)}
 				>
 					<div
 						className={
