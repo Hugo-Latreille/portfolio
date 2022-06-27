@@ -70,7 +70,7 @@
 
 .back-form .img-back img {
 	width: 50%;
-	// opacity: 0.5;
+	opacity: 0.9;
 }
 
 .central-form form {
@@ -82,8 +82,7 @@
 	justify-content: center;
 	flex-direction: column;
 	margin-top: -52px;
-	opacity: 0.9;
-	background-color: white;
+	background-color: #e8e8ea;
 	box-shadow: 0 0px 20px -2px #1f2235;
 	border-radius: 12px;
 }
@@ -104,10 +103,9 @@ form label {
 
 form input,
 textarea {
-	// width: 100%;
 	border: 2px solid rgba(0, 0, 0, 0);
 	outline: none;
-	background-color: rgba(230, 230, 230, 0.6);
+	background-color: #dadadc;
 	padding: 0.5rem 1rem;
 	font-size: 1.1rem;
 	margin-bottom: 22px;
@@ -117,11 +115,11 @@ textarea {
 
 textarea:focus {
 	border: 2px solid rgba(30, 85, 250, 0.47);
-	background-color: #fff;
+	// background-color: #fff;
 }
 form input:focus {
 	border: 2px solid rgba(30, 85, 250, 0.47);
-	background-color: #fff;
+	// background-color: #fff;
 }
 
 form button {
@@ -130,7 +128,7 @@ form button {
 	outline: none;
 	width: 900px;
 	color: rgb(230, 227, 227);
-	border: 2px solid #ff5823;
+	border: 2px solid vars.$title-color;
 	font-size: 12px;
 	border-radius: 19px;
 	background-color: #1f2235;
