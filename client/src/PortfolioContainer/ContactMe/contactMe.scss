@@ -56,7 +56,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex-wrap: wrap;
+	// flex-wrap: wrap;
 }
 
 .img-back h4 {
@@ -171,7 +171,8 @@ button .load img {
 
 @media screen and (max-width: 1000px) {
 	.about-container {
-		height: 80vh;
+		height: fit-content;
+		padding-bottom: 5rem;
 	}
 
 	.central-form {
