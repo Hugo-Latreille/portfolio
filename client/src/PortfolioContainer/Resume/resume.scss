@@ -13,12 +13,13 @@
 	display: flex;
 	height: 450px;
 	width: 100%;
+	box-shadow: 0 0px 20px -2px vars.$background-dark;
 	background-color: white;
 	/* margin: 80px 0; */
 }
 
 .resume-bullets {
-	box-shadow: 15px 0 9px -15px vars.$background-light;
+	box-shadow: 15px 0 9px -15px vars.$background-dark;
 	height: 100%;
 	width: 320px;
 }
@@ -110,6 +111,7 @@
 
 .resume-main-heading {
 	position: relative;
+	margin-right: 0.2rem;
 	display: flex;
 	justify-content: space-between;
 }
