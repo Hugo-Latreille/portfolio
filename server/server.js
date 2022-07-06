@@ -18,6 +18,15 @@ app.get("*", (req, res) =>
 	res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
 );
 
+app.get(
+	"/.well-known/acme-challenge/_Eh_QC54jR7GLVgYsVuSQocUB-khDhzu8nUWQW9jMSs",
+	(_, res) => {
+		res.send(
+			"_Eh_QC54jR7GLVgYsVuSQocUB-khDhzu8nUWQW9jMSs.Cj9QdMA29yqVV8UBn0L_tT-mubGixKu6oLQD1nDUTnY"
+		);
+	}
+);
+
 app.set("port", process.env.PORT || 3000);
 app.set("baseUrl", "http://localhost");
 const server = app.listen(app.get("port"), () => {
