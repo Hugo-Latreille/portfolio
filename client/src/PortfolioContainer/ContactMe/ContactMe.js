@@ -43,7 +43,8 @@ export default function ContactMe({ forwardRef, isVisible4 }) {
 				message,
 			};
 			setBool(true);
-			const res = await axios.post(`http://localhost:5000/contact`, data);
+			// const res = await axios.post(`http://localhost:5000/contact`, data);
+			const res = await axios.post(`/contact`, data);
 			if (name.length === 0 || email.length === 0 || message.length === 0) {
 				setBanner(res.data.msg);
 				toast.error(res.data.msg);

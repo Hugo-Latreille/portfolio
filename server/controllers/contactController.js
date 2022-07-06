@@ -4,6 +4,7 @@ const OAuth2 = google.auth.OAuth2;
 
 const postMail = async (req, res) => {
 	const data = req.body;
+	console.log(data);
 
 	if (
 		data.name.length === 0 ||
@@ -26,9 +27,8 @@ const postMail = async (req, res) => {
 	const myAccessToken = myOAuth2Client.getAccessToken();
 
 	const smtpTransporter = nodemailer.createTransport({
-		service: "Gmail",
-		port: 465,
-		secure: true,
+		service: "gmail",
+		// port: 465,
 		auth: {
 			type: "OAuth2",
 			user: "hugo.latreille@gmail.com",
