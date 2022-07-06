@@ -1,4 +1,6 @@
 const nodemailer = require("nodemailer");
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
 
 const postMail = async (req, res) => {
 	const data = req.body;
@@ -11,12 +13,31 @@ const postMail = async (req, res) => {
 		return res.json({ msg: "Merci de remplir tous les champs du formulaire" });
 	}
 
+	const myOAuth2Client = new OAuth2(
+		"285125527770-5rm3ape2vu1votrn9vvupu3mq2o2svn9.apps.googleusercontent.com",
+		"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"
+	);
+
+	myOAuth2Client.setCredentials({
+		refresh_token:
+			"1//04MjZ_VvxZdlUCgYIARAAGAQSNwF-L9IrFMahPSQGgNsmg99uZAk_l3vpJiGA0HXvB66Xm2d1SlSFIkNBRpqFesK4USAUBqNd8e0",
+	});
+
+	const myAccessToken = myOAuth2Client.getAccessToken();
+
 	const smtpTransporter = nodemailer.createTransport({
 		service: "Gmail",
 		port: 465,
+		secure: true,
 		auth: {
+			type: "OAuth2",
 			user: "hugo.latreille@gmail.com",
-			pass: "yjbskwwkutgtydvk",
+			clientId:
+				"285125527770-5rm3ape2vu1votrn9vvupu3mq2o2svn9.apps.googleusercontent.com",
+			clientSecret: "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",
+			refreshToken:
+				"1//04MjZ_VvxZdlUCgYIARAAGAQSNwF-L9IrFMahPSQGgNsmg99uZAk_l3vpJiGA0HXvB66Xm2d1SlSFIkNBRpqFesK4USAUBqNd8e0",
+			accessToken: myAccessToken,
 		},
 	});
 
