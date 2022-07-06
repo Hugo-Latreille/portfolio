@@ -14,14 +14,14 @@ app.use(express.json());
 app.use(router);
 
 app.use(express.static(path.resolve(__dirname, "./../client/build")));
-app.get(
-	"/.well-known/acme-challenge/aKFky3WOjfFYOwsnGt_GikYZxG4SgzPAj0RDo-zNWoE",
-	(_, res) => {
-		res.send(
-			"aKFky3WOjfFYOwsnGt_GikYZxG4SgzPAj0RDo-zNWoE.Cj9QdMA29yqVV8UBn0L_tT-mubGixKu6oLQD1nDUTnY"
-		);
-	}
-);
+// app.get(
+// 	"/.well-known/acme-challenge/aKFky3WOjfFYOwsnGt_GikYZxG4SgzPAj0RDo-zNWoE",
+// 	(_, res) => {
+// 		res.send(
+// 			"aKFky3WOjfFYOwsnGt_GikYZxG4SgzPAj0RDo-zNWoE.Cj9QdMA29yqVV8UBn0L_tT-mubGixKu6oLQD1nDUTnY"
+// 		);
+// 	}
+// );
 app.get("*", (req, res) =>
 	res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
 );
