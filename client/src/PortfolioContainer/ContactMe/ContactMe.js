@@ -24,6 +24,13 @@ export default function ContactMe({ forwardRef, isVisible4 }) {
 	const theme = useContext(ThemeContext);
 	const darkMode = theme.state.darkMode;
 
+	const handleURLNodeEnv = () => {
+		if (process.env.NODE_ENV === "development") {
+			return "http://localhost:5000/contact";
+		}
+		return `/contact`;
+	};
+
 	const handleName = (e) => {
 		setName(e.target.value);
 	};
@@ -43,8 +50,8 @@ export default function ContactMe({ forwardRef, isVisible4 }) {
 				message,
 			};
 			setBool(true);
-			// const res = await axios.post(`http://localhost:5000/contact`, data);
-			const res = await axios.post(`/contact`, data);
+
+			const res = await axios.post(handleURLNodeEnv(), data);
 			if (name.length === 0 || email.length === 0 || message.length === 0) {
 				setBanner(res.data.msg);
 				toast.error(res.data.msg);
