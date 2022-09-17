@@ -5,23 +5,23 @@
 	position: relative;
 	scroll-snap-align: start;
 
-	.arrow {
-		height: 75px;
-		width: 75px;
-		position: absolute;
-		cursor: pointer;
-		color: orange;
+	// .arrow {
+	// 	height: 75px;
+	// 	width: 75px;
+	// 	position: absolute;
+	// 	cursor: pointer;
+	// 	color: orange;
 
-		&.left {
-			top: 50%;
-			transform: translateX(-450px);
-		}
+	// 	&.left {
+	// 		top: 50%;
+	// 		transform: translateX(-450px);
+	// 	}
 
-		&.right {
-			top: 50%;
-			transform: translateX(450px);
-		}
-	}
+	// 	&.right {
+	// 		top: 50%;
+	// 		transform: translateX(450px);
+	// 	}
+	// }
 
 	.slider-parent {
 		width: 100%;
@@ -30,24 +30,28 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		// display: flex;
-		// flex-direction: column;
-		// align-items: center;
-		// justify-content: center;
 	}
+
+	// .video iframe {
+	// 	left: 0;
+	// 	top: 0;
+	// 	height: 100%;
+	// 	width: 100%;
+	// 	position: absolute;
+	// }
 
 	.slider {
 		height: 550px;
-		// width: 100vw;
+		width: 800px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 2500px;
-		transition: all 1s ease-out;
+		// gap: 2500px;
+		// transition: all 1s ease-out;
 		// gap + container width
 
 		.container {
-			width: 650px;
+			// width: 650px;
 			display: flex;
 			align-items: center;
 			height: 450px;
@@ -55,7 +59,7 @@
 
 			.item {
 				width: 100%;
-				height: 100%;
+				height: 99%;
 				background-color: white;
 				border-radius: 20px;
 				border-top-left-radius: 0px;
