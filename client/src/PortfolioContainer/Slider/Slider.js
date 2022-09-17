@@ -26,7 +26,7 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 				<p>
 					Develott est une plateforme de mise en relation, d'échange et de
 					collaboration entre développeurs juniors autour de projets
-					open-sources proposés par la communauté. <br /> Front-End :
+					open-sources proposés par la communauté. <br /> <br /> Front-End :
 					Javascript, React, Redux (Redux Toolkit / RTK Query), Sass <br />{" "}
 					Back-End : Javascript, NodeJs, Express, PostgreSql, Swagger, Sqitch,
 					JWT, NodeMailer, Passport.js{" "}
@@ -48,6 +48,22 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 		{
 			id: "3",
 			icon: "/assets/github.svg",
+			title: "Travel App",
+			desc: (
+				<p>
+					App fullstack permettant de noter et de partager ses destinations de
+					voyage. <br />
+					Front : Mapbox, React, CSS <br />
+					Back : Node.js, Express, MongoDB
+				</p>
+			),
+			img: "assets/travelApp.gif",
+			link: "https://github.com/Hugo-Latreille/travelApp",
+			// liveLink: "https://reactsocketchat.herokuapp.com/",
+		},
+		{
+			id: "4",
+			icon: "/assets/github.svg",
 			title: "VanillaJs SUTOM",
 			desc: "Une copie du SUTOM/Wordle en vanilla JS",
 			img: "assets/sutom.gif",
@@ -55,7 +71,7 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 			liveLink: "https://hugo-latreille.github.io/sutom/",
 		},
 		{
-			id: "4",
+			id: "5",
 			icon: "/assets/github.svg",
 			title: "Porfolio CSS",
 			desc: "Un premier essai de porfolio en pur HTML/CSS après une semaine de formation",
@@ -133,7 +149,7 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 
 										<h2>{d.title}</h2>
 										<p>{d.desc}</p>
-										{d.id !== "1" && (
+										{d.id !== "1" && d.id !== "3" && (
 											<a href={d.liveLink} target="_blank" rel="noreferrer">
 												<span>Demo</span>
 											</a>
