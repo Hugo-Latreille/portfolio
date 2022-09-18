@@ -179,9 +179,9 @@
 }
 
 @media only screen and (max-width: 1000px) {
-	.arrow {
-		display: none;
-	}
+	// .arrow {
+	// 	display: none;
+	// }
 
 	.slider-container {
 		height: fit-content;
@@ -189,14 +189,12 @@
 	}
 
 	.slider-container .slider {
-		height: 100vh;
 		flex-direction: column;
 		gap: 5px;
 	}
 
 	.slider-container .slider .container {
-		width: 80%;
-		transform: translateX(0px);
+		width: 100%;
 	}
 	.slider-container .slider .container .item .right img {
 		width: 100%;
