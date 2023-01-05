@@ -11,12 +11,12 @@ const AboutMe = ({ forwardRef, isVisible }) => {
 
 	const SCREEN_CONSTANTS = {
 		description:
-			"Ancien libraire et journaliste, j'ai suivi avec passion la formation Développeur JavaScript FullStack de l'école O'clock.",
+			"Ancien libraire et journaliste, j'ai suivi avec passion la formation Développeur JavaScript FullStack de l'école O'clock puis la POEC Concepteur Développeur Symfony proposée par l'ALIPTIC.",
 		highlights: {
 			bullets: [
 				"HTML5, CSS3(SASS)",
-				"ReactJS, Redux, JavaScript Vanilla",
-				"NodeJs, Express, PostGreSQL, MongoDB, Socket.io, MVP, API REST",
+				"ReactJS, Redux, JavaScript Vanilla, PHP",
+				"NodeJs, Express, Symfony, PostGreSQL, MongoDB, Socket.io, Mercure, MVP, API REST",
 				"Git/GitHub",
 				"Capacité de synthèse et de recherche documentaire",
 				"Curieux / Autonome / Travail d'équipe / Communication",

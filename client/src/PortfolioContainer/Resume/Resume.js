@@ -48,9 +48,13 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 	//here we have
 	const programmingSkillsDetails = [
 		{ skill: "JavaScript", logoSrc: "js.svg" },
+		{ skill: "PHP", logoSrc: "php.svg" },
 		{ skill: "React JS", logoSrc: "react.svg" },
+		{ skill: "Vue.js", logoSrc: "vue.svg" },
 		{ skill: "Express JS", logoSrc: "expressjs.svg" },
 		{ skill: "Node JS", logoSrc: "nodejs.svg" },
+		{ skill: "Symfony", logoSrc: "symfony.svg" },
+		{ skill: "Nest.js", logoSrc: "nest.svg" },
 		{ skill: "Mongo Db", logoSrc: "mongodb.svg" },
 		{ skill: "HTML", logoSrc: "html5.svg" },
 		{ skill: "CSS", logoSrc: "css3.svg" },
@@ -79,6 +83,12 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 
 	const resumeDetails = [
 		<div className="resume-screen-container" key="education">
+			<ResumeHeading
+				heading={"POEC Concepteur Développeur PHP - Spécialisation Symfony"}
+				subHeading={"ALIPTIC"}
+				fromDate={"2022"}
+				toDate={"2023"}
+			/>
 			<ResumeHeading
 				heading={
 					"Formation Développeur FullStack JavaScript, spécialisation React"
@@ -118,8 +128,19 @@ const Resume = ({ forwardRef, isVisible2 }) => {
 		<div className="resume-screen-container" key="work-experience">
 			<div className="experience-container">
 				<ResumeHeading
+					heading={"ALIPTIC"}
+					subHeading={"Développeur React / Symfony"}
+					fromDate={"2022"}
+					toDate={"2023"}
+				/>
+				<div className="experience-description">
+					<span className="resume-description-text">
+						Projet FullStack (Symfony, React, PostgreSQL) d'un mois et demi
+					</span>
+				</div>
+				<ResumeHeading
 					heading={"École O'clock"}
-					subHeading={"Développeur React"}
+					subHeading={"Développeur React / Node.js"}
 					// fromDate={"2021"}
 					toDate={"2022"}
 				/>
