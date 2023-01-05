@@ -21,6 +21,26 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 	const data = [
 		{
 			id: "1",
+			icon: "/assets/github.svg",
+			title: "QuasiQuiz",
+			desc: (
+				<p>
+					QuasiQuiz est un jeu de quiz multijoueur. Chaque joueur répond à une
+					série de questions minutées, l'un d'entre eux assurera la correction
+					"en direct". Le site est doté d'un backoffice côté Front pour gérer
+					les questions et l'upload des fichiers. La sécurité est assurée par un
+					système de JWT / refreshTokens (cookies HTTP only) <br /> <br />{" "}
+					Front-End : Javascript, React, Mercure, React Admin, Sass, Vite <br />{" "}
+					Back-End : Symfony 6.1, ApiPlatform, Mercure, PostgresSQL / MariaDB{" "}
+				</p>
+			),
+			img: "assets/quasiquiz.gif",
+			link: "https://github.com/Hugo-Latreille?tab=repositories&q=quasiquiz&type=&language=&sort=",
+			liveLink: "https:/quasiquiz.fr/",
+		},
+		{
+			id: "2",
+			icon: "/assets/github.svg",
 			title: "Develott",
 			desc: (
 				<p>
@@ -33,11 +53,12 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 				</p>
 			),
 			img: "assets/develott.png",
-			// liveLink: "https://hugo-latreille.github.io/",
+			link: "https://github.com/Hugo-Latreille?tab=repositories&q=develott&type=&language=&sort=",
+			liveLink: "https:/develott.fr/",
 			video: "https://tinyurl.com/develott",
 		},
 		{
-			id: "2",
+			id: "3",
 			icon: "/assets/github.svg",
 			title: "Chat React / socket.io",
 			desc: "App fullstack de chat React/Socket.io/MongoDB",
@@ -46,7 +67,7 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 			liveLink: "https://reactsocketchat.herokuapp.com/",
 		},
 		{
-			id: "3",
+			id: "4",
 			icon: "/assets/github.svg",
 			title: "Travel App",
 			desc: (
@@ -62,7 +83,7 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 			// liveLink: "https://reactsocketchat.herokuapp.com/",
 		},
 		{
-			id: "4",
+			id: "5",
 			icon: "/assets/github.svg",
 			title: "VanillaJs SUTOM",
 			desc: "Une copie du SUTOM/Wordle en vanilla JS",
@@ -71,7 +92,7 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 			liveLink: "https://hugo-latreille.github.io/sutom/",
 		},
 		{
-			id: "5",
+			id: "6",
 			icon: "/assets/github.svg",
 			title: "Porfolio CSS",
 			desc: "Un premier essai de porfolio en pur HTML/CSS après une semaine de formation",
@@ -139,17 +160,15 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 								</div>
 								<div className="left">
 									<div className="leftContainer">
-										{d.id !== "1" && (
-											<div className="imgContainer">
-												<a href={d.link} target="_blank" rel="noreferrer">
-													<img src={d.icon} alt="" />
-												</a>
-											</div>
-										)}
+										<div className="imgContainer">
+											<a href={d.link} target="_blank" rel="noreferrer">
+												<img src={d.icon} alt="" />
+											</a>
+										</div>
 
 										<h2>{d.title}</h2>
 										<p>{d.desc}</p>
-										{d.id !== "1" && d.id !== "3" && (
+										{d.id !== "4" && (
 											<a href={d.liveLink} target="_blank" rel="noreferrer">
 												<span>Demo</span>
 											</a>
