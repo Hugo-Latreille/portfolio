@@ -59,6 +59,14 @@ const Profile = (props) => {
 											.pause(2500)
 											.delete(10)
 											.pause(2500)
+											.type(" Node.js")
+											.pause(2500)
+											.delete(8)
+											.pause(2500)
+											.type(" Symfony")
+											.pause(2500)
+											.delete(8)
+											.pause(2500)
 											.type(" React")
 											.pause(2500);
 
@@ -67,7 +75,7 @@ const Profile = (props) => {
 								/>
 							</h1>
 							<p className="profile-subtitle">
-								Actuellement en reconversion chez O'clock
+								Reconverti via O'clock et l'ALIPTIC
 							</p>
 						</span>
 					</div>
