@@ -36,7 +36,7 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 			),
 			img: "assets/quasiquiz.gif",
 			link: "https://github.com/Hugo-Latreille?tab=repositories&q=quasiquiz&type=&language=&sort=",
-			liveLink: "https:/quasiquiz.fr/",
+			liveLink: "https://quasiquiz.fr/",
 		},
 		{
 			id: "2",
@@ -54,7 +54,7 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 			),
 			img: "assets/develott.png",
 			link: "https://github.com/Hugo-Latreille?tab=repositories&q=develott&type=&language=&sort=",
-			liveLink: "https:/develott.fr/",
+			liveLink: "https://develott.fr/",
 			video: "https://tinyurl.com/develott",
 		},
 		{
