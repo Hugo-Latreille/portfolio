@@ -64,7 +64,7 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 			desc: "App fullstack de chat React/Socket.io/MongoDB",
 			img: "assets/chatApp.gif",
 			link: "https://github.com/Hugo-Latreille/ReactSocketMongoChat",
-			liveLink: "https://reactsocketchat.herokuapp.com/",
+			liveLink: "https://chat.hugolatreille.dev/",
 		},
 		{
 			id: "4",
@@ -80,7 +80,6 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 			),
 			img: "assets/travelApp.gif",
 			link: "https://github.com/Hugo-Latreille/travelApp",
-			// liveLink: "https://reactsocketchat.herokuapp.com/",
 		},
 		{
 			id: "5",
