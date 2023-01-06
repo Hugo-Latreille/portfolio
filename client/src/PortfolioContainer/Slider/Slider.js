@@ -121,23 +121,20 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 				/>
 
 				<Swiper
-					breakpoints={{
-						// when window width is >= 300px
-						300: {
-							width: 300,
-							slidesPerView: 1,
-						},
-						// when window width is >= 760px
-						760: {
-							width: 760,
-							slidesPerView: 1,
-						},
-						// when window width is >= 900px
-						900: {
-							width: 800,
-							slidesPerView: 1,
-						},
-					}}
+					// breakpoints={{
+					// 	// when window width is >= 300px
+					// 	350: {
+					// 		width: 350,
+					// 	},
+					// 	// when window width is >= 760px
+					// 	760: {
+					// 		width: 760,
+					// 	},
+					// 	// when window width is >= 900px
+					// 	900: {
+					// 		width: 800,
+					// 	},
+					// }}
 					spaceBetween={30}
 					freeMode={true}
 					grabCursor={true}
@@ -145,6 +142,8 @@ const Slider = ({ forwardRef, isVisible3 }) => {
 					pagination={{
 						clickable: true,
 					}}
+					loop={true}
+					centeredSlides={true}
 					modules={[Pagination, Navigation, EffectCoverflow]}
 					effect={"coverflow"}
 					className="slider"

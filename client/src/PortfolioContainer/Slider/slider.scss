@@ -197,13 +197,14 @@
 
 	.slider-container .slider {
 		flex-direction: column;
+		width: 100%;
 		gap: 5px;
 	}
 
-	.slider-container .slider .container {
-		width: 100%;
-	}
-	.slider-container .slider .container .item .right img {
-		width: 100%;
-	}
+	// .slider-container .slider .container {
+	// 	width: 100%;
+	// }
+	// .slider-container .slider .container .item .right img {
+	// 	width: 100%;
+	// }
 }

@@ -52,6 +52,7 @@
 	font-size: 13px;
 }
 .highlight-blob {
+	flex-shrink: 0;
 	height: 12px;
 	width: 12px;
 	margin: 0 10px 0 0;
