@@ -16,7 +16,8 @@ const AboutMe = ({ forwardRef, isVisible }) => {
 			bullets: [
 				"HTML5, CSS3(SASS)",
 				"ReactJS, Redux, JavaScript Vanilla, PHP",
-				"NodeJs, Express, Symfony, PostGreSQL, MongoDB, Socket.io, Mercure, MVP, API REST",
+				"NodeJs, Express, Symfony, Socket.io, Mercure",
+				"PostGreSQL, MongoDB, MariaDb, MVP, API REST",
 				"Git/GitHub",
 				"Capacité de synthèse et de recherche documentaire",
 				"Curieux / Autonome / Travail d'équipe / Communication",
