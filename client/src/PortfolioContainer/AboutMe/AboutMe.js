@@ -14,6 +14,7 @@ const AboutMe = ({ forwardRef, isVisible }) => {
 			"Ancien libraire et journaliste, j'ai suivi avec passion la formation Développeur JavaScript FullStack de l'école O'clock puis la POEC Concepteur Développeur Symfony proposée par l'ALIPTIC.",
 		highlights: {
 			bullets: [
+				`Certification Opquast: Maîtrise de la qualité en projet web, 930/1000, niveau Expert, identifiant: TBYWVP.`,
 				"HTML5, CSS3(SASS)",
 				"ReactJS, Redux, JavaScript Vanilla, PHP",
 				"NodeJs, Express, Symfony, Socket.io, Mercure",

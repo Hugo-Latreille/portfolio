@@ -128,6 +128,7 @@
 							display: flex;
 							align-items: center;
 							justify-content: center;
+							flex-shrink: 0;
 
 							// @include mobile {
 							// 	width: 20px;

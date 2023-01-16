@@ -77,6 +77,15 @@ const Profile = (props) => {
 							<p className="profile-subtitle">
 								Reconverti via O'clock et l'ALIPTIC
 							</p>
+							<p className="profile-subtitle__opquast">
+								Certification Opquast :{" "}
+								<a
+									href="https://directory.opquast.com/fr/certificat/TBYWVP/"
+									target="_blank"
+								>
+									niveau Expert
+								</a>
+							</p>
 						</span>
 					</div>
 					<div className="profile-options">
